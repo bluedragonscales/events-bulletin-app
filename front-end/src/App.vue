@@ -2,7 +2,7 @@
 
     <app-header></app-header>
 
-    <h1>App</h1>
+    <router-view></router-view>
 
     <app-footer></app-footer>
 
@@ -32,6 +32,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Nanum Myeongjo', serif;
     }
 
 </style>

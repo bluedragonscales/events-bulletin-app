@@ -1,4 +1,5 @@
 // ROUTES FILE
+/* eslint-disable */
 import { createRouter, createWebHistory, START_LOCATION } from "vue-router";
 import Home from './components/main/AppHome.vue';
 import TermsOfUse from './components/main/TermsOfUse.vue';

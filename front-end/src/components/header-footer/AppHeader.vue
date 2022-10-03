@@ -4,13 +4,13 @@
     <nav class="nav-container p-4 navbar">
         <h1 class="text-white navbar-brand">Eat, Drink, What!</h1>
 
-        <ul class="navbar-nav mb-2 text-white d-flex flex-row">
+        <ul class="navbar-nav mb-2 d-flex flex-row">
             <li class="nav-item m-4 fs-4">
-                <span>Log Out</span>
+                <span class="nav-link text-white">Log Out</span>
             </li>
 
             <li class="nav-item m-4 fs-4">
-                <router-link to="/user/dashboard">Dashboard</router-link>
+                <router-link to="/user/dashboard" class="nav-link text-white">Dashboard</router-link>
             </li>
         </ul>
     </nav>
@@ -23,7 +23,7 @@
 <style scoped>
 
     h1 {
-        font-family: 'Nanum Myeongjo', serif;
+        font-weight: 700;
         padding-left: 5%;
         font-size: 4rem;
         cursor: pointer;
@@ -33,7 +33,7 @@
         background-color: black;
     }
 
-    li {
+    li span {
         cursor: pointer;
     }
 
