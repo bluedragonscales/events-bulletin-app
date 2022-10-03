@@ -26,7 +26,6 @@
         font-weight: 700;
         padding-left: 5%;
         font-size: 4rem;
-        cursor: pointer;
     }
 
     .nav-container {
