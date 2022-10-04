@@ -25,6 +25,7 @@
 
     footer {
         background-color: black;
+        /* margin-bottom: 0; */
     }
 
 </style>
