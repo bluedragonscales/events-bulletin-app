@@ -44,6 +44,8 @@
 
     .sign-in {
         margin: 2rem;
+        border: 2px solid black;
+        padding: 4rem 1rem;
     }
 
     .about p {

@@ -1,0 +1,40 @@
+<template>
+
+    <div v-if="element === 'input'">
+        <!-- The input box. -->
+        <input 
+            class="form-control mt-3" 
+            :type="type" 
+            v-bind="field" 
+            :placeholder="placeholder" 
+            :class="{'is-invalid': errorList.length !== 0}">
+
+        <!-- The error message. -->
+        <div v-if="errorList.length !== 0">
+            <p class="alert alert-danger">{{errorMsg}}</p>
+        </div>
+    </div>
+
+</template>
+
+
+
+<script>
+
+    export default {
+        props: ['field', 'errorList', 'errorMsg', 'element', 'type', 'placeholder']
+    }
+
+</script>
+
+
+
+
+<style scoped>
+
+    input {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+
+</style>
