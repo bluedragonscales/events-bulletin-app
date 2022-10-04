@@ -1,4 +1,5 @@
 <template>
+    <!-- TERMS OF USE COMPONENT -->
 
     <div class="container text-center p-5">
         <h2>Terms of Use</h2>
@@ -9,6 +10,7 @@
 
         <hr>
 
+        <!-- FIRST SECTION -->
         <h3>1) Acceptance of the Terms of Use Agreement</h3>
 
         <p>By creating an account with Eat, Drink, What!, whether through a mobile device, mobile application or computer, you agree to be bound by:</p>
@@ -31,6 +33,7 @@
 
         <hr>
 
+        <!-- SECOND SECTION -->
         <h3>2) Eligibility</h3>
 
         <p>You must be at least 18 years of age to create an account on Eat, Drink, What! and use the Service. By creating an account and using the Service, you represent and warrant that:</p>

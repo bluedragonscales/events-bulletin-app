@@ -1,4 +1,5 @@
 <template>
+    <!-- SIGN IN COMPONENT -->
 
     <div>
         <h3 class="text-center">Sign In</h3>

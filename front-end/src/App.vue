@@ -1,4 +1,5 @@
 <template>
+    <!-- MAIN APP COMPONENT -->
 
     <app-header></app-header>
 

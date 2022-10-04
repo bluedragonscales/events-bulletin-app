@@ -2,8 +2,12 @@
     <!-- HEADER COMPONENT -->
 
     <nav class="nav-container p-4 navbar">
-        <h1 class="text-white navbar-brand">Eat, Drink, What!</h1>
+        <!-- The top left site banner. -->
+        <router-link to="/" class="nav-link">
+            <h1 class="text-white navbar-brand">Eat, Drink, What!</h1>
+        </router-link>
 
+        <!-- The list of nav links at top right. -->
         <ul class="navbar-nav mb-2 d-flex flex-row">
             <li class="nav-item m-4 fs-4">
                 <span class="nav-link text-white">Log Out</span>

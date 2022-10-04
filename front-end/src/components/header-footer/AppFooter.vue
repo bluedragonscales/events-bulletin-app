@@ -14,6 +14,10 @@
             <li class="nav-item m-4 fs-3">
                 <router-link to="/terms" class="nav-link text-white">Terms of Use</router-link>
             </li>
+
+            <li class="nav-item m-4 fs-3">
+                <router-link to="/questions" class="nav-link text-white">Questions</router-link>
+            </li>
         </ul>
     </footer>
 

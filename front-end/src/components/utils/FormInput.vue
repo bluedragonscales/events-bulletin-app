@@ -1,5 +1,7 @@
 <template>
+    <!-- FORM INPUT COMPONENT -->
 
+    <!-- A generic input box to use instead of making input boxes multiple times. -->
     <div v-if="element === 'input'">
         <!-- The input box. -->
         <input 
