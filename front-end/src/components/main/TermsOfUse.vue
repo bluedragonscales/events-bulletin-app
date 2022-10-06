@@ -85,7 +85,7 @@
 
         <p>Eat, Drink, What! is always striving to improve the Service and bring you additional functionality that you will find engaging and useful. This means we may add new Service features or enhancements from time to time as well as remove some features. If these actions do not materially affect your rights or obligations, we may not provide you with notice before taking them. We may even suspend the Service entirely, in which event we will notify you in advance unless extenuating circumstances, such as safety or security concerns, prevent us from doing so.</p>
 
-        <p>You may terminate your account at any time, for any reason, by following the instructions in "Questions" in the Service. Eat, Drink, What! may terminate your account at any time without notice if it believes that you have violated this Agreement. After your account is terminated, this Agreement will terminate, except that the following provisions will still apply to you and Eat, Drink, What! (the "Parties"): <a href="#four">Section 4</a>, <a href="#five">Section 5</a>, <a href="#six">Section 6</a></p>
+        <p>You may terminate your account at any time, for any reason, by following the instructions in "Questions" in the Service. Eat, Drink, What! may terminate your account at any time without notice if it believes that you have violated this Agreement. After your account is terminated, this Agreement will terminate, except that the following provisions will still apply to you and Eat, Drink, What! (the "Parties"): <a href="#four">Section 4</a>, <a href="#five">Section 5</a>, <a href="#six">Section 6</a>, <a href="#eight">Section 8</a></p>
         <!-- FINISH LISTING THE SECTIONS -->
 
 
