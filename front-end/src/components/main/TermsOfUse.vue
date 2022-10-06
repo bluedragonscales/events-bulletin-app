@@ -16,6 +16,7 @@
             <li><a href="#five">Safety; Your Interactions With Other Members</a></li>
             <li><a href="#six">Rights Eat, Drink, What! Grants You</a></li>
             <li><a href="#seven">Rights You Grant Eat, Drink, What!</a></li>
+            <li><a href="#eight">Community Rules</a></li>
         </ul>
 
 
@@ -141,6 +142,31 @@
 
         <!-- SEVENTH SECTION -->
         <h3 id="seven">7) Rights You Grant Eat, Drink, What!</h3>
+
+        <p>By creating an account, you grant to Eat, Drink, What! a worldwide, transferable, sub-licensable, royalty-free, right and license to host, store, use, copy, display, reproduce, adapt, edit, publish, modify, reformat, incorporate into other works, advertise, distribute, and otherwise make available to the general public any information you post, upload, display, or otherwise make available (collectively, "post") on the Service or transmit to other members (collectively, "content"). Eat, Drink, What!'s license to your content shall be non-exclusive, except that Eat, Drink, What!'s license shall be exclusive with respect to derivative works created through use of the Service. For example, Eat, Drink, What! would have an exclusive license to screenshots of the Service that include your content.</p>
+
+        <p>In addition, so that Eat, Drink, What! can prevent the use of your content outside of the Service, you authorize Eat, Drink, What! to act on your behalf with respect to infringing uses of your content taken from the Service by other members or third parties. This expressly includes the authority, but not the obligation, to send notices pursuant to 17 U.S.C. 512(c)(3) (i.e., DMCA Takedown Notices) on your behalf if your content is taken and used by third parties outside of the Service.</p>
+        <!-- RESEARCH THE 17 U.S.C 512 THINGY -->
+
+        <p>Our license to your content is subject to your rights under applicable law (for example, laws regarding personal data protection to the extent any content contains personal information as defined by those laws) and is for the limited purpose of operating, developing, providing, and improving the Service and researching and developing new ones. You agree that any content you place or that you authorize us to place on the Service may be viewed by other members and may be viewed by any person visiting or participating in the Service (such as individuals who may receive shared content from other Eat, Drink, What! members).</p>
+
+        <p>You agree that all information that you submit upon creation of your account is accurate and truthful and you have the right to post the content on the Service and grant the license to Eat, Drink, What! above.</p>
+
+        <p>You understand and agree that we may monitor or review any content you post as part of the Service. <strong>We may delete any content, in whole or in part, that in our sole judgement violates this Agreement or may harm the reputation of the Service.</strong></p>
+
+        <p>When communicating with our customer car representatives, you agree to be respectful and kind. If we feel that your behavior towards any of our customer care representatives, other employees, or members is at any time threatening, harassing, or offensive, we reserve the right to immediately terminate your account.</p>
+
+        <p><strong>In consideration for Eat, Drink, What! allowing you to use the Service, you agree that we, our affiliates, and our third-party partners may place advertising on the Service. By submitting suggestions or feedback to Eat, Drink, What! regarding our Service, you agree that Eat, Drink, What! may use and share such feedback for any purpose without compensating you.</strong></p>
+
+        <p>You agree that Eat, Drink, What! may access, store, and disclose your account information and content if required to do so by law, by performing its agreement with you, or in a good faith believe that such access, storage or disclosure satisfies a legitimate interest including to: comply with legal process, enforce the Agreement, respond to claims that any content violates the rights of third parties, respond to your requests for customer service, and/or protect the rights, property, or personal safety of Eat, Drink, What!, its members, or any other person.</p>
+
+
+
+        <a href="#top">Back to Top</a>
+        <hr>
+
+        <!-- EIGHTH SECTION -->
+        <h3 id="eight">8) Community Rules</h3>
 
     </div>
 

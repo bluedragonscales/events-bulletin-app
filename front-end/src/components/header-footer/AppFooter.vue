@@ -16,7 +16,7 @@
             </li>
 
             <li class="nav-item m-4 fs-3">
-                <router-link to="/questions" class="nav-link text-white">Questions</router-link>
+                <router-link to="/contact" class="nav-link text-white">Questions</router-link>
             </li>
         </ul>
     </footer>
