@@ -17,6 +17,7 @@
             <li><a href="#six">Rights Eat, Drink, What! Grants You</a></li>
             <li><a href="#seven">Rights You Grant Eat, Drink, What!</a></li>
             <li><a href="#eight">Community Rules</a></li>
+            <li><a href="#nine">Notice and Procedure for Making Claims of Copyright Infringement</a></li>
         </ul>
 
 
@@ -167,6 +168,52 @@
 
         <!-- EIGHTH SECTION -->
         <h3 id="eight">8) Community Rules</h3>
+
+        <p>By using the Service, you agree that you will not:</p>
+
+        <ul>
+            <li>- use the Service for any purpose that is illegal or prohibited by this Agreement</li>
+            <li>- use the Service for any harmful or nefarious purpose</li>
+            <li>- use the Service in order to damage Eat, Drink, What!</li>
+            <li>- violate our <a href="community">Community Guildelines</a>, as updated from time to time</li>
+            <li>- spam or solicit money or other items of value from another member, whether as a gift, loan, or other form of compensation, or otherwise defraud any members</li>
+            <li>- impersonate any person or entity without said person or entity's permission</li>
+            <li>- bully, "stalk", intimidate, assault, harass, mistreat, or defame any person</li>
+            <li>- post any content that violates or infringes anyone's rights, including rights of publicity, privacy, copyright, trademark, or other intellectual property or contract rights</li>
+            <li>- post any content that is hate speech, threatening, sexually explicit or pornographic, incites violence, or contains nudity or graphic or gratuitous violence</li>
+            <li>- post any content that promotes racism, bigotry, hatred, sexism, prejudice, or physical harm of any kind against any group or individual</li>
+            <li>- solicit passwords for any purpose, or personal identifying information for commercial or unlawful purposes from other users or disseminate another person's personal information without his or her permission</li>
+            <li>- use another user's account, share an account with another user, or maintain more than one account</li>
+            <li>- misrepresent your identity, age, current or previous positions, qualifications, or affiliations with a person or entity</li>
+            <li>- create another account if we have already terminated your account, unless you have our written permission</li>
+        </ul>
+
+        <p>Eat, Drink, What! reserves the right to investigate and/or terminate your account if you have violated this Agreement, misused the Service or behaved in a way that Eat, Drink, What! deems as inappropriate or unlawful, including actions or communications that occur on or off the Service.</p>
+
+        <p><strong>Although Eat, Drink, What! reserves the right to review and remove content and/or members that violate this Agreement, such content is the sole responsibility of the member who posts it, and Eat, Drink, What! cannot guarantee that all content will comply with this Agreement 100%. If you see content on the Service that violates this Agreement, please report it with the contact information provided in <a href="/contact">Questions</a>.</strong></p>
+
+
+
+        <a href="#top">Back to Top</a>
+        <hr>
+
+        <!-- NINTH SECTION -->
+        <h3 id="nine">9) Notice and Procedure for Making Claims of Copyright Infringement</h3>
+
+        <p>If you believe that your work has been copied and posted on the Service in a way that constitutes copyright infringement, please report this violation in <a href="/contact">Questions</a>.</p>
+
+        <p>If you contact us regarding alleged copyright infringement, please be sure to include the following inforamtion:</p>
+
+        <ul>
+            <li>- an electronic or physical signature of the person authorized to act on behalf of the owner of the copyright interest</li>
+            <li>- a description of the copyrighted work that you claim has been infringed</li>
+            <li>- a description of where the material that you claim is infringing is located on the Service (and such description must be reasonably sufficient to enable us to find the alleged infringing material)</li>
+            <li>- your contact information, including telephone number and email address, and the copyright owner's identity</li>
+            <li>- a written statement by you that you have a good faith belief that the disputed use is not authorized by the copyright owner, its agent, or the law</li>
+            <li>- a statement by you, made under penalty of perjury, that the above information in your notice is accurate and that you are the copyright owner or authorized to act on the copyright owner's behalf</li>
+        </ul>
+
+        <p>Eat, Drink, What! will terminate the accounts of repeat infringers.</p>
 
     </div>
 

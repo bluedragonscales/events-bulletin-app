@@ -16,6 +16,10 @@
             <li class="nav-item m-4 fs-4">
                 <router-link to="/user/dashboard" class="nav-link text-white">Dashboard</router-link>
             </li>
+
+            <li class="nav-item m-4 fs-4">
+                <router-link to="/user/dashboard" class="nav-link text-white">Settings</router-link>
+            </li>
         </ul>
     </nav>
 

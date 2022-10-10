@@ -38,7 +38,7 @@
             </div>
             
 
-            <!-- Login credentials registration section. -->
+            <!-- Email and birthdate registration section. -->
             <div class="d-flex justify-content-around login-reg">
                 <!-- EMAIL INPUT -->
                 <div class="form-group mt-5">
@@ -54,6 +54,24 @@
                     </Field>
                 </div>
 
+                <!-- BIRTHDATE INPUT -->
+                <div class="form-group mt-5">
+                    <Field name="password" v-slot="{field, errors, errorMessage}">
+                        <form-input
+                            :field="field"
+                            :errorList="errors" 
+                            :errorMsg="errorMessage" 
+                            element="input"
+                            type="date">
+                        </form-input>
+                    </Field>
+                </div>
+                
+            </div>
+
+
+            <!-- Password registration section -->
+            <div class="d-flex justify-content-around login-reg">
                 <!-- PASSWORD INPUT -->
                 <div class="form-group mt-5">
                     <Field name="password" v-slot="{field, errors, errorMessage}">
@@ -86,9 +104,8 @@
 
 
 
-
             <!-- SUBMIT BUTTON -->
-            <button type="submit" class="btn btn-dark mt-5">Sign In</button>
+            <button type="submit" class="btn btn-dark mt-5 mb-5">Register</button>
         </Form>
     </div>
 
@@ -136,7 +153,13 @@
     }
 
     .login-reg {
-        width: 80%;
+        width: 50%;
+    }
+
+    button {
+        width: 20rem;
+        padding: 20px;
+        font-size: 1.5rem;
     }
 
 </style>
