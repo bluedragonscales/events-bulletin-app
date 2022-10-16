@@ -40,6 +40,15 @@
         background-color: black;
     }
 
+    @media screen and (max-width: 971) {
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
     li span {
         cursor: pointer;
     }

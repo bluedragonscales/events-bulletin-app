@@ -1,9 +1,9 @@
 <template>
     <!-- MAIN HOME COMPONENT -->
 
-    <div class="home-container row">
+    <div class="home-container row d-flex align-items-center">
         <!-- Essay about the site. -->
-        <div class="col-7 about">
+        <div class="col-lg-7 col-sm-12 about">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repellat eos temporibus maiores dolorem nobis quibusdam, soluta sequi sint obcaecati officia distinctio beatae esse natus ipsam molestias excepturi a minus.</p>
 
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod distinctio amet, deserunt error quibusdam eligendi voluptate accusamus quis suscipit libero illo. Aliquid amet, labore corrupti quam laudantium voluptatem ipsum?</p>
@@ -12,7 +12,7 @@
         </div>
 
         <!-- The sign in box at the right side. -->
-        <div class="col-4 sign-in">
+        <div class="col-lg-4 col-sm-12 sign-in">
             <sign-in></sign-in>
         </div>
     </div>
@@ -41,20 +41,16 @@
         margin: 2%;
     }
 
-    .about {
-        margin: 2rem;
-    }
-
     .sign-in {
-        margin: 2rem;
+        margin: 1rem;
         border: 2px solid black;
-        padding: 4rem 1rem;
+        padding: 4.5rem 1rem;
     }
 
     .about p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 300;
-        line-height: 2;
+        line-height: 1.7;
     }
 
 </style>
