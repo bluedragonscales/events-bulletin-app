@@ -1,7 +1,7 @@
 <template>
     <!-- TERMS OF USE COMPONENT -->
 
-    <div class="container text-center p-5">
+    <div class="container p-5">
         <h2 id="top">Terms of Use</h2>
 
         <p class="mb-4">Last revised on October 03, 2022</p>
@@ -18,6 +18,10 @@
             <li><a href="#seven">Rights You Grant Eat, Drink, What!</a></li>
             <li><a href="#eight">Community Rules</a></li>
             <li><a href="#nine">Notice and Procedure for Making Claims of Copyright Infringement</a></li>
+            <li><a href="#ten">Disclaimers</a></li>
+            <li><a href="#eleven">Third Party Services</a></li>
+            <li><a href="#twelve">Limitation of Liability</a></li>
+            <li><a href="#thirteen">Dispute Resolution Section</a></li>
         </ul>
 
 
@@ -30,7 +34,7 @@
         <p>By creating an account with Eat, Drink, What!, whether through a mobile device, mobile application or computer, you agree to be bound by:</p>
 
         <ul>
-            <li>Terms of Use</li>
+            <li><a href="#top">Terms of Use</a></li>
             <li><a href="#privacy">Privacy Policy</a></li>
             <li><a href="#cookie">Cookie Policy</a></li>
             <li><a href="#safety">Safety Tips</a></li>
@@ -214,6 +218,58 @@
         </ul>
 
         <p>Eat, Drink, What! will terminate the accounts of repeat infringers.</p>
+
+
+
+        <a href="#top">Back to Top</a>
+        <hr>
+
+        <!-- TENTH SECTION -->
+        <h3 id="ten">10) Disclaimers</h3>
+
+        <p>Eat, Drink, What! provides the service on an "as is" and "as available" basis and to the extent permitted by applicable law. Eat, Drink, What! grants no warranties of any kind, whether express, implied, statutory or otherwise with respect to the Service (including all content contained therin), including, without limitation, any implied warranties of satisfactory quality, merchantability, fitness for a particular purpose or non-infringement.</p>
+
+        <p>Eat, Drink, What! does not represent or warrant that: the service will be uninterrupted, secure, or error free; any defects or errors in the Service will be discovered or corrected; any content or information you obtain on or through the Service will be accurate, or appropriate for your purposes.</p>
+
+        <p>Eat, Drink, What! assumes no responsibility for any content that you or another member or third party posts, sends, or receives through the Service. Any material downloaded or otherwise obtained through the use of the Service is accessed at your own discretion and risk. <strong>Eat, Drink, What! disclaims and assumes no responsibility for any conduct of you or any other member, on or off the Service.</strong></p>
+
+
+
+
+        <a href="#top">Back to Top</a>
+        <hr>
+
+        <!-- ELEVENTH SECTION -->
+        <h3 id="eleven">11) Third Party Services</h3>
+
+        <p>The Service may contain advertisements and promotions offered by third parties and links to other web sites or resources. Eat, Drink, What! is not responsible for the availability (or lack of availability) of such external websites or resources. If you choose to interact with the third parties made available through our Service, such party's terms will govern their relationship with you. Eat, Drink, What! is not responsible or liable for such third parties' terms or actions.</p>
+
+
+
+
+        <a href="#top">Back to Top</a>
+        <hr>
+
+        <!-- TWELFTH SECTION -->
+        <h3 id="twelve">12) Limitation of Liability</h3>
+
+        <p>To the fullest extent permitted by applicable law, in no event shall Eat, Drink, What!, its affiliates, employees, licensors, or service providers be liable for any indirect, consequential, exemplary, incidental, special, punitive, fixed, or enhanced damages, including, without limitation, loss of profits, whether incurred directly or indirectly, or any loss of data, use, goodwill, or other intangible losses resulting from: your access to or use of or inability to access or use the Service; the conduct or content of any members or third parties on or through any of our websites or in connection with the Service; any unauthorized access, use or alteration of your content, even if Eat, Drink, What! has been advised at any time of the possibility of such damages.</p>
+
+        <p>To the fullest extent permitted by applicable law, in no event shall Eat, Drink, What!'s aggregate liability to you for any and all claims arising out of or relating to the Service or this agreement exceed the amount paid, if any, by you to Eat, Drink, What! during the twenty-four (24) month period immediately preceeding the date that you first file a lawsuit, arbitration or any other legal proceeding against Eat, Drink, What!, whether in law or in equity, in any tribunal.</p>
+
+        <p>The damages limitation set forth in the immediately preceding sentence applies: regardless of the ground upon which any liability is based (whether default, contract, tort, statute, or otherwise); irrespective of the type of breach of obligations; with respect to all events, the Service, and this agreement.</p>
+
+        <p>The limitation of liability provisions set forth in this section 12 shall apply even if your remedies under this agreement fail with respect to their essential purpose.</p>
+
+        <p>Some jurisdictions do not allow the exclusion or limitation of certain damages, so some or all of the exclusions and limitations in this section may not apply to you.</p>
+
+
+
+        <a href="#top">Back to Top</a>
+        <hr>
+
+        <!-- THIRTEENTH SECTION -->
+        <h3 id="thirteen">13) Dispute Resolution Section</h3>
 
     </div>
 
