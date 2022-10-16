@@ -8,16 +8,16 @@
         </router-link>
 
         <!-- The list of nav links at top right. -->
-        <ul class="navbar-nav mb-2 d-flex flex-row">
-            <li class="nav-item m-4 fs-4">
+        <ul class="navbar-nav mb-2">
+            <li class="nav-item fs-4">
                 <span class="nav-link text-white">Log Out</span>
             </li>
 
-            <li class="nav-item m-4 fs-4">
+            <li class="nav-item fs-4">
                 <router-link to="/user/dashboard" class="nav-link text-white">Dashboard</router-link>
             </li>
 
-            <li class="nav-item m-4 fs-4">
+            <li class="nav-item fs-4">
                 <router-link to="/user/dashboard" class="nav-link text-white">Settings</router-link>
             </li>
         </ul>
@@ -36,11 +36,18 @@
         font-size: 4rem;
     }
 
+    @media screen and (max-width: 997px) {
+        h1 {
+            padding-left: 10px;
+            font-size: 2rem;
+        }
+    }
+
     .nav-container {
         background-color: black;
     }
 
-    @media screen and (max-width: 971) {
+    @media screen and (max-width: 997px) {
         .nav-container {
             display: flex;
             flex-direction: column;
@@ -49,8 +56,30 @@
         }
     }
 
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    li {
+        margin: 1.5rem;
+    }
+
     li span {
         cursor: pointer;
+    }
+
+    @media screen and (max-width: 997px) {
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        li {
+            margin: 10px;
+        }
     }
 
 </style>

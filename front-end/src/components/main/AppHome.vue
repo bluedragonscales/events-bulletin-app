@@ -53,4 +53,14 @@
         line-height: 1.7;
     }
 
+    @media screen and (max-width: 997px) {
+        .about {
+            padding: 1rem;
+        }
+        
+        .sign-in {
+            margin: 5px;
+        }
+    }
+
 </style>
