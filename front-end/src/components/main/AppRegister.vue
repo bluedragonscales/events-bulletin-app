@@ -1,15 +1,15 @@
 <template>
     <!-- REGISTRATION COMPONENT -->
 
-    <div class="container text-center">
-        <h2 class="mt-5">Register for Eat, Drink, What!</h2>
+    <div class="container">
+        <h2 class="mt-5 text-center">Register for Eat, Drink, What!</h2>
 
-        <Form @submit="onSubmit" :validation-schema="signInSchema" class="text-center">
+        <Form @submit="onSubmit" :validation-schema="registerSchema" class="text-center">
             
             <!-- Name registration section. -->
-            <div class="d-flex justify-content-around name-reg">
+            <div class="d-flex justify-content-center name-reg mt-3">
                 <!-- FIRST NAME INPUT -->
-                <div class="form-group mt-5 ml-5">
+                <div class="form-group m-3">
                     <Field name="firstname" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
@@ -23,7 +23,7 @@
                 </div>
 
                 <!-- LAST NAME INPUT -->
-                <div class="form-group mt-5">
+                <div class="form-group m-3">
                     <Field name="lastname" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
@@ -39,9 +39,9 @@
             
 
             <!-- Email and birthdate registration section. -->
-            <div class="d-flex justify-content-around login-reg">
+            <div class="d-flex justify-content-center login-reg mt-3">
                 <!-- EMAIL INPUT -->
-                <div class="form-group mt-5">
+                <div class="form-group m-3">
                     <Field name="email" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
@@ -55,8 +55,8 @@
                 </div>
 
                 <!-- BIRTHDATE INPUT -->
-                <div class="form-group mt-5">
-                    <Field name="password" v-slot="{field, errors, errorMessage}">
+                <div class="form-group m-3">
+                    <Field name="birthdate" v-slot="{field, errors, errorMessage}" class="birth">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -71,9 +71,9 @@
 
 
             <!-- Password registration section -->
-            <div class="d-flex justify-content-around login-reg">
+            <div class="d-flex justify-content-center login-reg mt-3">
                 <!-- PASSWORD INPUT -->
-                <div class="form-group mt-5">
+                <div class="form-group m-3">
                     <Field name="password" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
@@ -87,7 +87,7 @@
                 </div>
 
                 <!-- RETYPE PASSWORD INPUT -->
-                <div class="form-group mt-5">
+                <div class="form-group m-3">
                     <Field name="password" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
@@ -122,11 +122,12 @@
     export default {
         data() {
             return {
-                signInSchema: {
+                registerSchema: {
                     firstname: yup.string().required('Your first name is required.'),
                     lastname: yup.string().required('Your last name is required.'),
-                    email: yup.string().required('An email is required to sign in.'),
-                    password: yup.string().required('A password is required to sign in.')
+                    email: yup.string().required('An email is required.'),
+                    birthdate: yup.date().required('A birthday is required.'),
+                    password: yup.string().required('A password is required.')
                 }
             }
         },
@@ -148,18 +149,16 @@
 
 <style scoped>
 
-    .name-reg {
-        width: 50%;
-    }
-
-    .login-reg {
-        width: 50%;
+    .birth {
+        padding: 10px;
+        font-size: 1.2rem;
+        width: 204px;
     }
 
     button {
         width: 20rem;
-        padding: 20px;
-        font-size: 1.5rem;
+        padding: 15px;
+        font-size: 1.3rem;
     }
 
 </style>
