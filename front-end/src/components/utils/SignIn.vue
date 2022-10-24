@@ -46,7 +46,7 @@
 <script>
     import {Form, Field} from 'vee-validate';
     import * as yup from 'yup';
-    import FormInput from '../utils/FormInput.vue';
+    import FormInput from './FormInput.vue';
 
     export default {
         data() {

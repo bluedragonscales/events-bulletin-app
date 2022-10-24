@@ -14,11 +14,15 @@
             </li>
 
             <li class="nav-item fs-4">
-                <router-link to="/user/dashboard" class="nav-link text-white">Dashboard</router-link>
+                <router-link to="/dashboard" class="nav-link text-white">Dashboard</router-link>
             </li>
 
             <li class="nav-item fs-4">
-                <router-link to="/user/dashboard" class="nav-link text-white">Settings</router-link>
+                <router-link to="/settings" class="nav-link text-white">Settings</router-link>
+            </li>
+
+            <li class="nav-item fs-4">
+                <router-link to="/admin/settings" class="nav-link text-white">Admin Settings</router-link>
             </li>
         </ul>
     </nav>

@@ -22,7 +22,7 @@
 
 
 <script>
-    import SignIn from './SignIn.vue';
+    import SignIn from '../utils/SignIn.vue';
 
     export default {
         components: {
