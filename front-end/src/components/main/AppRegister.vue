@@ -56,8 +56,9 @@
 
                 <!-- BIRTHDATE INPUT -->
                 <div class="form-group m-3">
-                    <Field name="birthdate" v-slot="{field, errors, errorMessage}" class="birth">
+                    <Field name="birthdate" v-slot="{field, errors, errorMessage}">
                         <form-input
+                            class="birth"
                             :field="field"
                             :errorList="errors" 
                             :errorMsg="errorMessage" 
@@ -100,7 +101,6 @@
                     </Field>
                 </div>
             </div>
-
 
 
 
@@ -150,9 +150,7 @@
 <style scoped>
 
     .birth {
-        padding: 10px;
-        font-size: 1.2rem;
-        width: 204px;
+        width: 250px;
     }
 
     button {

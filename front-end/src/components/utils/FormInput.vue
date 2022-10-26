@@ -5,7 +5,7 @@
     <div v-if="element === 'input'">
         <!-- The input box. -->
         <input 
-            class="form-control mt-3" 
+            class="mt-2" 
             :type="type" 
             v-bind="field" 
             :placeholder="placeholder" 
@@ -37,6 +37,16 @@
     input {
         padding: 10px;
         font-size: 1.2rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: black;
+        border: 1px solid #ced4da;
+        border-radius: 0.375rem;
+        width: 100%;
+    }
+
+    input:focus {
+        border: 2px solid black;
     }
 
 </style>

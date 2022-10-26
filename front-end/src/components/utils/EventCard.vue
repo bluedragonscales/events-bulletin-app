@@ -1,6 +1,6 @@
 <template>
 
-    <article class="col-lg-3 col-sm-12" v-for="(event, index) in eventData" :key="index">
+    <article class="col-lg-4 col-sm-12" v-for="(event, index) in eventData" :key="index">
         <h4>{{event.title}}</h4>
         <p>Date and time</p>
         <p>{{event.address}}</p>
@@ -31,6 +31,7 @@
         border: 2px solid black;
         padding: 10px;
         text-align: center;
+        /* margin: 1rem; */
     }
 
     h4 {

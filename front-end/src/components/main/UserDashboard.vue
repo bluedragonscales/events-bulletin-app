@@ -5,7 +5,7 @@
 
         <button class="btn btn-dark mt-3 mb-5">Add Event</button>
 
-        <section class="row">
+        <section class="row g-4">
             <event-block :eventData="events"></event-block>
         </section>
     </div>
@@ -34,3 +34,16 @@
     }
 
 </script>
+
+
+
+
+<style scoped>
+
+    section {
+        margin-bottom: 1rem;
+        max-height: 200vh;
+        overflow-y: scroll;
+    }
+
+</style>
