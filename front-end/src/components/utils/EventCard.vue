@@ -5,6 +5,7 @@
         <p>Date and time</p>
         <p>{{event.address}}</p>
         <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente aliquam dolorem et quia facere dicta? Fuga nisi repellendus deserunt ipsa, unde cupiditate non culpa, repellat nihil harum soluta, cumque consectetur!</p>
+        <h5>Event Host</h5>
     </article>
 
     <!-- If the event is today then reverse colors: black background and white text. -->

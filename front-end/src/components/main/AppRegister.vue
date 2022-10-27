@@ -150,7 +150,7 @@
 <style scoped>
 
     .birth {
-        width: 250px;
+        width: 20rem;
     }
 
     button {

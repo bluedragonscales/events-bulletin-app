@@ -43,7 +43,7 @@
                             :errorList="errors" 
                             :errorMsg="errorMessage" 
                             element="input"
-                            type="url"
+                            type="text"
                             placeholder="Address of the event">
                         </form-input>
                     </Field>
@@ -63,6 +63,22 @@
                         </form-input>
                     </Field>
                 </div>
+
+
+                <!-- EVENT OWNER INPUT -->
+                <div class="form-group mt-5">
+                    <Field name="owner" v-slot="{field, errors, errorMessage}">
+                        <form-input
+                            :field="field"
+                            :errorList="errors" 
+                            :errorMsg="errorMessage" 
+                            element="input"
+                            type="text"
+                            placeholder="Event host">
+                        </form-input>
+                    </Field>
+                </div>
+
 
                 <!-- SUBMIT BUTTON -->
                 <button type="submit" class="btn btn-dark mt-5">Add Event</button>
