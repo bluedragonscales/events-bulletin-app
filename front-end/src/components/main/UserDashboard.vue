@@ -3,9 +3,21 @@
 
         <h2 class="mt-5 text-center">Dashboard</h2>
 
-        <button class="btn btn-dark mt-3 mb-5">Add Event</button>
+        <!-- Button to trigger modal. -->
+        <button type="button" class="btn btn-dark mt-3 mb-5" data-bs-toggle="modal" data-bs-target="#addEventModal">Add Event</button>
 
-        <section class="row g-4">
+        <!-- Modal -->
+        <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <add-event></add-event>
+                </div>
+            </div>
+        </div>
+
+        
+        <!-- List of events. -->
+        <section class="row g-2">
             <event-block :eventData="events"></event-block>
         </section>
     </div>
@@ -15,10 +27,12 @@
 
 <script>
     import EventBlock from '../utils/EventCard.vue';
+    import AddEvent from '../utils/AddEventModal.vue';
 
     export default {
         components: {
-            EventBlock
+            EventBlock,
+            AddEvent
         },
         data() {
             return {
