@@ -4,10 +4,12 @@
     <div class="container">
         <h2 class="mt-5 text-center">Register for Eat, Drink, What!</h2>
 
+
         <Form @submit="onSubmit" :validation-schema="registerSchema" class="text-center">
-            
+
             <!-- Name registration section. -->
-            <div class="d-flex justify-content-center name-reg mt-3">
+            <h5 class="mt-5">Your Name</h5>
+            <div class="d-flex justify-content-center">
                 <!-- FIRST NAME INPUT -->
                 <div class="form-group m-3">
                     <Field name="firstname" v-slot="{field, errors, errorMessage}">
@@ -17,7 +19,7 @@
                             :errorMsg="errorMessage" 
                             element="input"
                             type="text"
-                            placeholder="Your first name">
+                            placeholder="First">
                         </form-input>
                     </Field>
                 </div>
@@ -31,15 +33,18 @@
                             :errorMsg="errorMessage" 
                             element="input"
                             type="text"
-                            placeholder="Your last name">
+                            placeholder="Last">
                         </form-input>
                     </Field>
                 </div>
             </div>
             
 
+
+
             <!-- Email and birthdate registration section. -->
-            <div class="d-flex justify-content-center login-reg mt-3">
+            <h5 class="mt-5">Your Email and Birthdate</h5>
+            <div class="d-flex justify-content-center">
                 <!-- EMAIL INPUT -->
                 <div class="form-group m-3">
                     <Field name="email" v-slot="{field, errors, errorMessage}">
@@ -49,16 +54,15 @@
                             :errorMsg="errorMessage" 
                             element="input"
                             type="email"
-                            placeholder="Your email">
+                            placeholder="Email">
                         </form-input>
                     </Field>
                 </div>
 
                 <!-- BIRTHDATE INPUT -->
-                <div class="form-group m-3">
+                <div class="form-group m-3 birthday">
                     <Field name="birthdate" v-slot="{field, errors, errorMessage}">
-                        <form-input
-                            class="birth"
+                        <form-input 
                             :field="field"
                             :errorList="errors" 
                             :errorMsg="errorMessage" 
@@ -66,13 +70,15 @@
                             type="date">
                         </form-input>
                     </Field>
-                </div>
-                
+                </div> 
             </div>
 
 
+
+
             <!-- Password registration section -->
-            <div class="d-flex justify-content-center login-reg mt-3">
+            <h5 class="mt-5">Your Password</h5>
+            <div class="d-flex justify-content-center">
                 <!-- PASSWORD INPUT -->
                 <div class="form-group m-3">
                     <Field name="password" v-slot="{field, errors, errorMessage}">
@@ -82,21 +88,21 @@
                             :errorMsg="errorMessage" 
                             element="input"
                             type="password"
-                            placeholder="Your password">
+                            placeholder="Password">
                         </form-input>
                     </Field>
                 </div>
 
                 <!-- RETYPE PASSWORD INPUT -->
                 <div class="form-group m-3">
-                    <Field name="password" v-slot="{field, errors, errorMessage}">
+                    <Field name="retype" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
                             :errorList="errors" 
                             :errorMsg="errorMessage" 
                             element="input"
                             type="password"
-                            placeholder="Retype your password">
+                            placeholder="Retype password">
                         </form-input>
                     </Field>
                 </div>
@@ -127,7 +133,8 @@
                     lastname: yup.string().required('Your last name is required.'),
                     email: yup.string().required('An email is required.'),
                     birthdate: yup.date().required('A birthday is required.'),
-                    password: yup.string().required('A password is required.')
+                    password: yup.string().required('A password is required.'),
+                    retype: yup.string().required('Please retype your password.')
                 }
             }
         },
@@ -149,8 +156,8 @@
 
 <style scoped>
 
-    .birth {
-        width: 20rem;
+    .birthday {
+        width: 250px;
     }
 
     button {

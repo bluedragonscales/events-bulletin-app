@@ -37,6 +37,7 @@
 
 
 
+
 <script>
 
     export default {
@@ -44,6 +45,7 @@
     }
 
 </script>
+
 
 
 
@@ -63,6 +65,10 @@
 
     input:focus {
         border: 1px solid black;
+    }
+
+    .alert {
+        margin-bottom: -40px;
     }
 
 </style>

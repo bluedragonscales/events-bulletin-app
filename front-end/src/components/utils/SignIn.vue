@@ -23,6 +23,7 @@
             <div class="form-group mt-5">
                 <Field name="password" v-slot="{field, errors, errorMessage}">
                     <form-input
+                        class="sign-input"
                         :field="field"
                         :errorList="errors" 
                         :errorMsg="errorMessage" 
@@ -74,6 +75,10 @@
 
 
 <style scoped>
+
+    .sign-input {
+        width: 250px;
+    }
 
     button {
         width: 50%;
