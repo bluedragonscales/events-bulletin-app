@@ -15,13 +15,14 @@
             </div>
         </div>
 
-        
+
         <!-- List of events. -->
         <section class="row g-2">
             <event-block :eventData="events"></event-block>
         </section>
     </div>
 </template>
+
 
 
 

@@ -17,6 +17,22 @@
         </div>
     </div>
 
+
+
+    <!-- For "textarea" boxes. -->
+    <div v-if="element === 'textarea'">
+        <textarea
+            class="form-control mt-3" 
+            :class="{'is-invalid': errorList.length !== 0}" 
+            :rows="rows" 
+            v-bind="field" 
+            :placeholder="placeholder"></textarea>
+
+        <div v-if="errorList.length !== 0">
+            <p class="alert alert-danger">{{errorMsg}}</p>
+        </div>
+    </div>
+
 </template>
 
 
@@ -24,7 +40,7 @@
 <script>
 
     export default {
-        props: ['field', 'errorList', 'errorMsg', 'element', 'type', 'placeholder']
+        props: ['field', 'errorList', 'errorMsg', 'element', 'type', 'placeholder', 'rows']
     }
 
 </script>

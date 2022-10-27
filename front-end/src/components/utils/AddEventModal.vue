@@ -49,6 +49,21 @@
                     </Field>
                 </div>
 
+
+                <!-- EVENT DESCRIPTION INPUT -->
+                <div class="form-group mt-5">
+                    <Field name="description" v-slot="{field, errors, errorMessage}">
+                        <form-input
+                            :field="field"
+                            :errorList="errors" 
+                            :errorMsg="errorMessage" 
+                            element="textarea"
+                            :rows="10"
+                            placeholder="Description of the event.">
+                        </form-input>
+                    </Field>
+                </div>
+
                 <!-- SUBMIT BUTTON -->
                 <button type="submit" class="btn btn-dark mt-5">Add Event</button>
             </Form>
@@ -80,7 +95,8 @@
                 addEventSchema: {
                     title: yup.string().required('What is the title of the event?'),
                     time: yup.string().required('What time and day will the event take place?'),
-                    address: yup.string().required('Where is the event taking place?')
+                    address: yup.string().required('Where is the event taking place?'),
+                    description: yup.string().required('What is the event about?')
                 }
             }
         },

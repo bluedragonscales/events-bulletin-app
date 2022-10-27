@@ -31,7 +31,6 @@
         border: 2px solid black;
         padding: 10px;
         text-align: center;
-        /* margin: 1rem; */
     }
 
     h4 {
