@@ -6,7 +6,7 @@
 
         <Form @submit="onSubmit" :validation-schema="signInSchema" class="text-center">
             <!-- EMAIL INPUT -->
-            <div class="form-group mt-5">
+            <div class="form-group mt-3">
                 <Field name="email" v-slot="{field, errors, errorMessage}">
                     <form-input
                         :field="field"
@@ -23,7 +23,6 @@
             <div class="form-group mt-5">
                 <Field name="password" v-slot="{field, errors, errorMessage}">
                     <form-input
-                        class="sign-input"
                         :field="field"
                         :errorList="errors" 
                         :errorMsg="errorMessage" 
@@ -37,6 +36,8 @@
             <!-- SUBMIT BUTTON -->
             <button type="submit" class="btn btn-dark mt-5">Sign In</button>
         </Form>
+
+        <p class="text-center forgot">Forgot your password? <span>Click here!</span></p>
     </div>
 
 </template>
@@ -76,8 +77,15 @@
 
 <style scoped>
 
-    .sign-input {
-        width: 250px;
+    .forgot {
+        margin-top: 2rem;
+        margin-bottom: -2rem;
+        cursor: default;
+    }
+
+    .forgot span {
+        cursor: pointer;
+        text-decoration: underline;
     }
 
     button {

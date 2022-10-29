@@ -29,6 +29,7 @@
 
     footer {
         background-color: black;
+        margin-bottom: -1rem;
     }
 
     ul {
