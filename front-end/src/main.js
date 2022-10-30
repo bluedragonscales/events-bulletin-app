@@ -3,6 +3,7 @@ import App from './App.vue';
 import Router from './routes.js';
 import Store from './store/index.js';
 import Toaster from "@meforma/vue-toaster";
+import './firebase.js';
 
 const app = createApp(App);
 

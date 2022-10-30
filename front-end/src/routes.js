@@ -7,7 +7,7 @@ import Register from './components/main/AppRegister.vue';
 import Contact from './components/main/ContactQuestions.vue';
 import Dashboard from './components/main/UserDashboard.vue';
 import Settings from './components/main/UserSettings.vue';
-import AdminSettings from './components/admin/AdminSettings.vue';
+import AdminSettings from './components/main/AdminSettings.vue';
 
 
 const routes = createRouter({

@@ -12,7 +12,7 @@
             <div class="d-flex justify-content-center">
                 <!-- FIRST NAME INPUT -->
                 <div class="form-group m-3">
-                    <Field name="firstname" v-slot="{field, errors, errorMessage}">
+                    <Field name="firstname" v-slot="{field, errors, errorMessage}" :value="'Ky'">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -26,7 +26,7 @@
 
                 <!-- LAST NAME INPUT -->
                 <div class="form-group m-3">
-                    <Field name="lastname" v-slot="{field, errors, errorMessage}">
+                    <Field name="lastname" v-slot="{field, errors, errorMessage}" :value="'Kar'">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -47,7 +47,7 @@
             <div class="d-flex justify-content-center">
                 <!-- EMAIL INPUT -->
                 <div class="form-group m-3">
-                    <Field name="email" v-slot="{field, errors, errorMessage}">
+                    <Field name="email" v-slot="{field, errors, errorMessage}" :value="'dragon@gmail.com'">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -81,7 +81,7 @@
             <div class="d-flex justify-content-center">
                 <!-- PASSWORD INPUT -->
                 <div class="form-group m-3">
-                    <Field name="password" v-slot="{field, errors, errorMessage}">
+                    <Field name="password" v-slot="{field, errors, errorMessage}" :value="'dragons'">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -95,7 +95,7 @@
 
                 <!-- RETYPE PASSWORD INPUT -->
                 <div class="form-group m-3">
-                    <Field name="retype" v-slot="{field, errors, errorMessage}">
+                    <Field name="retype" v-slot="{field, errors, errorMessage}" :value="'dragons'">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -146,6 +146,7 @@
         methods: {
             onSubmit(values) {
                 console.log(values);
+                this.$store.dispatch('auth/signUp', values);
             }
         }
     }

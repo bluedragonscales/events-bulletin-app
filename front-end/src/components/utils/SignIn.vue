@@ -54,7 +54,7 @@
         data() {
             return {
                 signInSchema: {
-                    email: yup.string().required('An email is required to sign in.'),
+                    email: yup.string().required('An email is required to sign in.').email('Not a valid email.'),
                     password: yup.string().required('A password is required to sign in.')
                 }
             }
@@ -65,8 +65,9 @@
             Field
         },
         methods: {
-            onSubmit(values) {
+            onSubmit(values, {resetForm}) {
                 console.log(values);
+                resetForm();
             }
         }
     }
