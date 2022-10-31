@@ -92,20 +92,6 @@
                         </form-input>
                     </Field>
                 </div>
-
-                <!-- RETYPE PASSWORD INPUT -->
-                <div class="form-group m-3">
-                    <Field name="retype" v-slot="{field, errors, errorMessage}" :value="'dragons'">
-                        <form-input
-                            :field="field"
-                            :errorList="errors" 
-                            :errorMsg="errorMessage" 
-                            element="input"
-                            type="password"
-                            placeholder="Retype password">
-                        </form-input>
-                    </Field>
-                </div>
             </div>
 
 
@@ -133,8 +119,7 @@
                     lastname: yup.string().required('Your last name is required.'),
                     email: yup.string().required('An email is required.'),
                     birthdate: yup.date().required('A birthday is required.'),
-                    password: yup.string().required('A password is required.'),
-                    retype: yup.string().required('Please retype your password.')
+                    password: yup.string().required('A password is required.')
                 }
             }
         },

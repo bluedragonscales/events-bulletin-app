@@ -7,7 +7,7 @@
         <Form @submit="onSubmit" :validation-schema="signInSchema" class="text-center">
             <!-- EMAIL INPUT -->
             <div class="form-group mt-3">
-                <Field name="email" v-slot="{field, errors, errorMessage}">
+                <Field name="email" v-slot="{field, errors, errorMessage}" :value="'dragon@gmail.com'">
                     <form-input
                         :field="field"
                         :errorList="errors" 
@@ -21,7 +21,7 @@
 
             <!-- PASSWORD INPUT -->
             <div class="form-group mt-5">
-                <Field name="password" v-slot="{field, errors, errorMessage}">
+                <Field name="password" v-slot="{field, errors, errorMessage}" :value="'dragons'">
                     <form-input
                         :field="field"
                         :errorList="errors" 
@@ -66,7 +66,7 @@
         },
         methods: {
             onSubmit(values, {resetForm}) {
-                console.log(values);
+                this.$store.dispatch('auth/signIn', values);
                 resetForm();
             }
         }
