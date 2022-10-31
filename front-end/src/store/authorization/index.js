@@ -3,6 +3,7 @@
 import {db, fireAuth} from '../../firebase.js';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 import {doc, setDoc, getDoc} from 'firebase/firestore';
+import router from '../../routes';
 
 
 const DEFAULT_USER = {
@@ -52,6 +53,8 @@ const authModule = {
 
                 commit('setUser', newUser);
 
+                router.push('/dashboard');
+
             } catch(error) {
                 console.log(error);
             }
@@ -80,6 +83,8 @@ const authModule = {
                 const userData = await dispatch('getUserProfile', userCredentials.user.uid);
                 console.log(userData);
                 commit('setUser', userData);
+
+                router.push('/dashboard');
 
             } catch(error) {
                 console.log(error);

@@ -65,9 +65,8 @@
             Field
         },
         methods: {
-            onSubmit(values, {resetForm}) {
+            onSubmit(values) {
                 this.$store.dispatch('auth/signIn', values);
-                resetForm();
             }
         }
     }
