@@ -14,11 +14,28 @@
 <script>
     import AppHeader from './components/header-footer/AppHeader.vue';
     import AppFooter from './components/header-footer/AppFooter.vue';
+    import {mapGetters} from 'vuex';
 
     export default {
         components: {
             AppHeader,
             AppFooter
+        },
+        computed: {
+            ...mapGetters({
+                toastMsg: 'notify/getToastMsg'
+            })
+        },
+        watch: {
+            toastMsg(toastMsg) {
+                if(toastMsg[0] === true) {
+                    if(toast[2] === 'error') {
+                        this.$toast.error(toastMsg[1]);
+                    } else if(toast[2] === 'success') {
+                        this.$toast.success(toastMsg[1]);
+                    }
+                }
+            }
         }
     }
 

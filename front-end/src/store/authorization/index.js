@@ -4,6 +4,7 @@ import {db, fireAuth} from '../../firebase.js';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 import {doc, setDoc, getDoc} from 'firebase/firestore';
 import router from '../../routes';
+import {msgError, msgSuccess} from '../vuex.js';
 
 
 const DEFAULT_USER = {
@@ -52,11 +53,13 @@ const authModule = {
                 await setDoc(doc(db, 'users', userCredentials.user.uid), newUser);
 
                 commit('setUser', newUser);
+                msgSuccess(commit, "Welcome to Eat, Drink, What!");
 
                 router.push('/dashboard');
 
             } catch(error) {
                 console.log(error);
+                msgError(commit, "Something's wrong with your registration.");
             }
         },
         async getUserProfile({commit}, payload) {
