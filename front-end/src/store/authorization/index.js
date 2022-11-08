@@ -4,7 +4,8 @@ import {db, fireAuth} from '../../firebase.js';
 import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
 import {doc, setDoc, getDoc} from 'firebase/firestore';
 import router from '../../routes';
-import {msgError, msgSuccess} from '../vuex.js';
+import {msgError, msgSuccess} from '../../tools/vuex.js';
+import fbErrors from '../../tools/fberrorcodes.js';
 
 
 const DEFAULT_USER = {
@@ -58,8 +59,7 @@ const authModule = {
                 router.push('/dashboard');
 
             } catch(error) {
-                console.log(error);
-                msgError(commit, "Something's wrong with your registration.");
+                msgError(commit, fbErrors(error.code));
             }
         },
         async getUserProfile({commit}, payload) {
@@ -90,7 +90,7 @@ const authModule = {
                 router.push('/dashboard');
 
             } catch(error) {
-                console.log(error);
+                msgError(commit, fbErrors(error.code));
             }
         }
     }

@@ -4,6 +4,7 @@ const notificationsModule = {
     namespaced: true,
     state() {
         return {
+            loader: false,
             toastMsg: [false, '', 'error']
         }
     },

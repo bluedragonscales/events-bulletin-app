@@ -29,9 +29,9 @@
         watch: {
             toastMsg(toastMsg) {
                 if(toastMsg[0] === true) {
-                    if(toast[2] === 'error') {
+                    if(toastMsg[2] === 'error') {
                         this.$toast.error(toastMsg[1]);
-                    } else if(toast[2] === 'success') {
+                    } else if(toastMsg[2] === 'success') {
                         this.$toast.success(toastMsg[1]);
                     }
                 }
