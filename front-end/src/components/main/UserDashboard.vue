@@ -1,5 +1,5 @@
 <template>
-    <div class="container text-center">
+    <div class="container text-center" v-if="!isLoading">
 
         <h2 class="mt-5 text-center">Dashboard</h2>
 
@@ -21,6 +21,10 @@
             <event-block :eventData="events"></event-block>
         </section>
     </div>
+
+    <div class="page-loader container text-center m-5" v-else>
+        <loader></loader>
+    </div>
 </template>
 
 
@@ -29,11 +33,14 @@
 <script>
     import EventBlock from '../utils/EventCard.vue';
     import AddEvent from '../utils/AddEventModal.vue';
+    import Loader from '../utils/AppLoader.vue';
+    import {mapGetters} from 'vuex';
 
     export default {
         components: {
             EventBlock,
-            AddEvent
+            AddEvent,
+            Loader
         },
         data() {
             return {
@@ -45,6 +52,11 @@
                     {title: 'Event Five', address: '207 Maple St'},
                 ]
             }
+        },
+        computed: {
+            ...mapGetters({
+                isLoading: 'notify/getLoadingState'
+            })
         }
     }
 
@@ -59,6 +71,10 @@
         margin-bottom: 1rem;
         max-height: 200vh;
         overflow-y: scroll;
+    }
+
+    .container {
+        min-height: 60vh;
     }
 
 </style>

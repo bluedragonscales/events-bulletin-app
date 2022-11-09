@@ -37,6 +37,8 @@ const authModule = {
     actions: {
         async signUp({commit}, payload) {
             try {
+                commit('notify/setLoadingState', true, {root: true});
+
                 const userCredentials = await createUserWithEmailAndPassword(
                     fireAuth,
                     payload.email,
@@ -60,6 +62,8 @@ const authModule = {
 
             } catch(error) {
                 msgError(commit, fbErrors(error.code));
+            } finally {
+                commit('notify/setLoadingState', false, {root: true});
             }
         },
         async getUserProfile({commit}, payload) {
@@ -77,6 +81,8 @@ const authModule = {
         },
         async signIn({commit, dispatch}, payload) {
             try {
+                commit('notify/setLoadingState', true, {root: true});
+
                 const userCredentials = await signInWithEmailAndPassword(
                     fireAuth,
                     payload.email,
@@ -91,6 +97,8 @@ const authModule = {
 
             } catch(error) {
                 msgError(commit, fbErrors(error.code));
+            } finally {
+                commit('notify/setLoadingState', false, {root: true});
             }
         }
     }

@@ -8,8 +8,6 @@
         <h5>Event Host</h5>
     </article>
 
-    <!-- If the event is today then reverse colors: black background and white text. -->
-
 </template>
 
 

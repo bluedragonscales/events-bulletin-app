@@ -11,11 +11,17 @@ const notificationsModule = {
     getters: {
         getToastMsg(state) {
             return state.toastMsg;
+        },
+        getLoadingState(state) {
+            return state.loader;
         }
     },
     mutations: {
         setToastMsg(state, payload) {
             state.toastMsg = [true, payload.msg, payload.type];
+        },
+        setLoadingState(state, payload) {
+            state.loader = payload;
         }
     }
 }
