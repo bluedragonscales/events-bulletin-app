@@ -81,7 +81,7 @@
             <div class="d-flex justify-content-center">
                 <!-- PASSWORD INPUT -->
                 <div class="form-group m-3">
-                    <Field name="password" v-slot="{field, errors, errorMessage}" :value="'dragons'">
+                    <Field name="password" v-slot="{field, errors, errorMessage}" :value="'dragonss'">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -115,11 +115,24 @@
         data() {
             return {
                 registerSchema: {
-                    firstname: yup.string().required('Your first name is required.'),
-                    lastname: yup.string().required('Your last name is required.'),
-                    email: yup.string().required('An email is required.'),
-                    birthdate: yup.date().required('A birthday is required.'),
-                    password: yup.string().required('A password is required.')
+                    firstname: yup.string()
+                        .required('Your first name is required.')
+                        .max(30, 'No longer than 30 characters.'),
+                    lastname: yup.string()
+                        .required('Your last name is required.')
+                        .max(30, 'No longer than 30 characters.'),
+                    email: yup.string()
+                        .required('An email is required.')
+                        .email('Not a valid email.')
+                        .max(30, 'No longer than 30 characters.'),
+                    birthdate: yup.date()
+                        .required('A birthday is required.')
+                        // 567,648,000 seconds in 18 years.
+                        .max(new Date(), 'You must be at least 18 years old.'),
+                    password: yup.string()
+                        .required('A password is required.')
+                        .min(8, 'Must be 8 or more characters.')
+                        .max(30, 'No longer than 30 characters.')
                 }
             }
         },

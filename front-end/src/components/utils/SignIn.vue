@@ -54,8 +54,14 @@
         data() {
             return {
                 signInSchema: {
-                    email: yup.string().required('An email is required to sign in.').email('Not a valid email.'),
-                    password: yup.string().required('A password is required to sign in.')
+                    email: yup.string()
+                        .required('An email is required to sign in.')
+                        .email('Not a valid email.')
+                        .max(30, 'No longer than 30 characters.'),
+                    password: yup.string()
+                        .required('A password is required to sign in.')
+                        .min(8, 'Must be 8 or more characters.')
+                        .max(30, 'No longer than 30 characters.')
                 }
             }
         },

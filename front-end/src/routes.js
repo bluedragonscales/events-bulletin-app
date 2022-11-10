@@ -8,6 +8,9 @@ import Contact from './components/main/ContactQuestions.vue';
 import Dashboard from './components/main/UserDashboard.vue';
 import Settings from './components/main/UserSettings.vue';
 import AdminSettings from './components/main/AdminSettings.vue';
+import {onAuthStateChanged} from 'firebase/auth';
+import {fireAuth} from './firebase.js';
+import Store from './store';
 
 
 const routes = createRouter({
@@ -22,6 +25,33 @@ const routes = createRouter({
         {path: '/admin/settings', component: AdminSettings}
     ]
 });
+
+
+
+const validateCheck = (to, from, next) => {
+    next();
+}
+
+
+
+routes.beforeEach((to, from, next) => {
+    if(from === START_LOCATION) {
+        const unsubscribe = onAuthStateChanged(fireAuth, user => {
+            if(user) {
+                Store.dispatch('auth/autoSignIn', user).then(() => {
+                    validateCheck(to, from, next);
+                })
+            } else {
+                validateCheck(to, from, next);
+            }
+        });
+        unsubscribe();
+    } else {
+        validateCheck(to, from, next);
+    }
+});
+
+
 
 
 export default routes;

@@ -77,6 +77,7 @@ const authModule = {
                 }
             } catch(error) {
                 console.log(error);
+                msgError(commit);
             }
         },
         async signIn({commit, dispatch}, payload) {
@@ -99,6 +100,15 @@ const authModule = {
                 msgError(commit, fbErrors(error.code));
             } finally {
                 commit('notify/setLoadingState', false, {root: true});
+            }
+        },
+        async autoSignIn({commit, dispatch}, payload) {
+            try {
+                const userData = await dispatch('getUserProfile', payload.uid);
+                commit('setUser', userData);
+                return true;
+            } catch(error) {
+                msgError(commit, error.code);
             }
         }
     }
