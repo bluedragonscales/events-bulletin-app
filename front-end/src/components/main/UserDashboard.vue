@@ -21,10 +21,6 @@
             <event-block :eventData="events"></event-block>
         </section>
     </div>
-
-    <div class="page-loader container text-center m-5" v-else>
-        <loader></loader>
-    </div>
 </template>
 
 
@@ -33,14 +29,11 @@
 <script>
     import EventBlock from '../utils/EventCard.vue';
     import AddEvent from '../utils/AddEventModal.vue';
-    import Loader from '../utils/AppLoader.vue';
-    import {mapGetters} from 'vuex';
 
     export default {
         components: {
             EventBlock,
-            AddEvent,
-            Loader
+            AddEvent
         },
         data() {
             return {
@@ -52,11 +45,6 @@
                     {title: 'Event Five', address: '207 Maple St'},
                 ]
             }
-        },
-        computed: {
-            ...mapGetters({
-                isLoading: 'notify/getLoadingState'
-            })
         }
     }
 

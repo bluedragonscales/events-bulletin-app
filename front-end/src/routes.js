@@ -30,6 +30,7 @@ const routes = createRouter({
 
 const validateCheck = (to, from, next) => {
     next();
+    Store.commit('notify/setLoadingState', false);
 }
 
 

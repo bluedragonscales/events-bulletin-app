@@ -3,11 +3,11 @@
 
     <footer>
         <ul class="navbar-nav mb-2 text-white">
-            <li class="nav-item fs-3">
+            <li class="nav-item fs-3" v-if="!isAuth">
                 <router-link to="/" class="nav-link text-white">Home</router-link>
             </li>
 
-            <li class="nav-item fs-3">
+            <li class="nav-item fs-3" v-if="!isAuth">
                 <router-link to="/register" class="nav-link text-white">Register</router-link>
             </li>
 
@@ -22,6 +22,28 @@
     </footer>
 
 </template>
+
+
+
+
+<script>
+    import {mapGetters} from 'vuex';
+
+    export default {
+        methods: {
+            signOutUser() {
+                this.$store.dispatch('auth/signOut');
+            }
+        },
+        computed: {
+            ...mapGetters({
+                isAuth: 'auth/getAuthStatus'
+            })
+        }
+    }
+
+</script>
+
 
 
 

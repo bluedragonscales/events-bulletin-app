@@ -21,7 +21,7 @@
 
             <!-- PASSWORD INPUT -->
             <div class="form-group mt-5">
-                <Field name="password" v-slot="{field, errors, errorMessage}" :value="'dragons'">
+                <Field name="password" v-slot="{field, errors, errorMessage}" :value="'dragonss'">
                     <form-input
                         :field="field"
                         :errorList="errors" 

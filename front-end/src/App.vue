@@ -3,7 +3,11 @@
 
     <app-header></app-header>
 
-    <router-view></router-view>
+    <router-view v-if="!isLoading"></router-view>
+
+    <div class="text-center m-5 load-container" v-else>
+        <app-loader></app-loader>
+    </div>
 
     <app-footer></app-footer>
 
@@ -14,16 +18,19 @@
 <script>
     import AppHeader from './components/header-footer/AppHeader.vue';
     import AppFooter from './components/header-footer/AppFooter.vue';
+    import AppLoader from './components/utils/AppLoader.vue';
     import {mapGetters} from 'vuex';
 
     export default {
         components: {
             AppHeader,
-            AppFooter
+            AppFooter,
+            AppLoader
         },
         computed: {
             ...mapGetters({
-                toastMsg: 'notify/getToastMsg'
+                toastMsg: 'notify/getToastMsg',
+                isLoading: 'notify/getLoadingState'
             })
         },
         watch: {
@@ -51,6 +58,10 @@
         padding: 0;
         box-sizing: border-box;
         font-family: 'Nanum Myeongjo', serif;
+    }
+
+    .load-container {
+        min-height: 50vh;
     }
 
 </style>

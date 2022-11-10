@@ -25,6 +25,16 @@ const authModule = {
             auth: false
         }
     },
+    getters: {
+        getAuthStatus(state) {
+            if(state.auth) return true;
+            else return false;
+        },
+        getAdminStatus(state) {
+            if(state.user.isAdmin) return true;
+            else return false;
+        }
+    },
     mutations: {
         setUser(state, payload) {
             state.user = {
@@ -32,6 +42,10 @@ const authModule = {
                 ...payload
             }
             state.auth = true;
+        },
+        clearUser(state) {
+            state.user = DEFAULT_USER;
+            state.auth = false;
         }
     },
     actions: {
@@ -107,6 +121,16 @@ const authModule = {
                 const userData = await dispatch('getUserProfile', payload.uid);
                 commit('setUser', userData);
                 return true;
+            } catch(error) {
+                msgError(commit, error.code);
+            }
+        },
+        async signOut({commit}) {
+            try {
+                await fireAuth.signOut();
+                msgSuccess(commit, 'Later, alligator!');
+                commit('clearUser');
+                router.push("/");
             } catch(error) {
                 msgError(commit, error.code);
             }
