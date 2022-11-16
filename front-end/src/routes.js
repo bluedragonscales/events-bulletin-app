@@ -11,25 +11,35 @@ import AdminSettings from './components/main/AdminSettings.vue';
 import {onAuthStateChanged} from 'firebase/auth';
 import {fireAuth} from './firebase.js';
 import Store from './store';
+import store from "./store";
 
 
 const routes = createRouter({
     history: createWebHistory(),
     routes: [
-        {path: '/', component: Home, name: 'home'},
+        {path: '/', component: Home, meta: {home: true}},
         {path: '/terms', component: TermsOfUse},
-        {path: '/register', component: Register},
+        {path: '/register', component: Register, meta: {home: true}},
         {path: '/contact', component: Contact},
-        {path: '/dashboard', component: Dashboard},
-        {path: '/settings', component: Settings},
-        {path: '/admin/settings', component: AdminSettings}
+        {path: '/dashboard', component: Dashboard, meta: {auth: true}},
+        {path: '/settings', component: Settings, meta: {auth: true}},
+        {path: '/admin/settings', component: AdminSettings, meta: {auth: true}}
     ]
 });
 
 
 
 const validateCheck = (to, from, next) => {
-    next();
+    if(to.meta.auth && !store.getters['auth/getAuthStatus']) {
+        //If the meta shows that the user has to be authenticated AND the auth status shows as not authenticated.
+        next('/');
+    } else if(to.meta.home && store.getters['auth/getAuthStatus']) {
+        //If the meta shows that the user has to be authenticated AND the auth status shows as authenticated.
+        next('/dashboard');
+    } else {
+        next();
+    }
+
     Store.commit('notify/setLoadingState', false);
 }
 

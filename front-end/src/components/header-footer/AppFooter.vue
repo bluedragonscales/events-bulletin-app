@@ -15,8 +15,12 @@
                 <router-link to="/terms" class="nav-link text-white">Terms of Use</router-link>
             </li>
 
-            <li class="nav-item fs-3">
+            <li class="nav-item fs-3" v-if="!isAdmin">
                 <router-link to="/contact" class="nav-link text-white">Questions</router-link>
+            </li>
+
+            <li class="nav-item fs-3">
+                <span class="nav-link text-white">Copyright</span>
             </li>
         </ul>
     </footer>
@@ -37,7 +41,8 @@
         },
         computed: {
             ...mapGetters({
-                isAuth: 'auth/getAuthStatus'
+                isAuth: 'auth/getAuthStatus',
+                isAdmin: 'auth/getAdminStatus'
             })
         }
     }
@@ -76,6 +81,10 @@
         li {
             margin: 8px;
         }
+    }
+
+    span {
+        cursor: default;
     }
 
 </style>
