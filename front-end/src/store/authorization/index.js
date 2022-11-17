@@ -33,6 +33,10 @@ const authModule = {
         getAdminStatus(state) {
             if(state.user.isAdmin) return true;
             else return false;
+        },
+        getUserData(state) {
+            return state.user;
+            // Do I end up using this?
         }
     },
     mutations: {

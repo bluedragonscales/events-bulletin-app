@@ -9,7 +9,7 @@
         <div class="modal-body">
             <Form @submit="onSubmit" :validation-schema="addEventSchema" class="text-center">
                 <!-- EVENT TITLE INPUT -->
-                <div class="form-group mt-5">
+                <div class="form-group mt-2">
                     <Field name="title" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
@@ -22,51 +22,9 @@
                     </Field>
                 </div>
 
-                <!-- EVENT DATE INPUT -->
-                <div class="form-group mt-5">
-                    <Field name="time" v-slot="{field, errors, errorMessage}">
-                        <form-input
-                            :field="field"
-                            :errorList="errors" 
-                            :errorMsg="errorMessage" 
-                            element="input"
-                            type="date">
-                        </form-input>
-                    </Field>
-                </div>
-
-                <!-- EVENT ADDRESS INPUT -->
-                <div class="form-group mt-5">
-                    <Field name="address" v-slot="{field, errors, errorMessage}">
-                        <form-input
-                            :field="field"
-                            :errorList="errors" 
-                            :errorMsg="errorMessage" 
-                            element="input"
-                            type="text"
-                            placeholder="Address of the event">
-                        </form-input>
-                    </Field>
-                </div>
-
-
-                <!-- EVENT DESCRIPTION INPUT -->
-                <div class="form-group mt-5">
-                    <Field name="description" v-slot="{field, errors, errorMessage}">
-                        <form-input
-                            :field="field"
-                            :errorList="errors" 
-                            :errorMsg="errorMessage" 
-                            element="textarea"
-                            :rows="10"
-                            placeholder="Description of the event.">
-                        </form-input>
-                    </Field>
-                </div>
-
 
                 <!-- EVENT OWNER INPUT -->
-                <div class="form-group mt-5">
+                <div class="form-group mt-2">
                     <Field name="owner" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
@@ -80,8 +38,51 @@
                 </div>
 
 
+                <!-- EVENT DATE INPUT -->
+                <div class="form-group mt-2">
+                    <Field name="time" v-slot="{field, errors, errorMessage}">
+                        <form-input
+                            :field="field"
+                            :errorList="errors" 
+                            :errorMsg="errorMessage" 
+                            element="input"
+                            type="date">
+                        </form-input>
+                    </Field>
+                </div>
+
+                <!-- EVENT ADDRESS INPUT -->
+                <!-- <div class="form-group mt-5">
+                    <Field name="address" v-slot="{field, errors, errorMessage}">
+                        <form-input
+                            :field="field"
+                            :errorList="errors" 
+                            :errorMsg="errorMessage" 
+                            element="input"
+                            type="text"
+                            placeholder="Address of the event">
+                        </form-input>
+                    </Field>
+                </div> -->
+
+
+                <!-- EVENT DESCRIPTION INPUT -->
+                <div class="form-group mt-2">
+                    <Field name="description" v-slot="{field, errors, errorMessage}">
+                        <form-input
+                            :field="field"
+                            :errorList="errors" 
+                            :errorMsg="errorMessage" 
+                            element="textarea"
+                            :rows="10"
+                            placeholder="Description, time, and place of event.">
+                        </form-input>
+                    </Field>
+                </div>
+
+
                 <!-- SUBMIT BUTTON -->
-                <button type="submit" class="btn btn-dark mt-5">Add Event</button>
+                <button type="submit" class="btn btn-dark mt-2" :disabled="loading">Add Event</button>
             </Form>
         </div>
                    
@@ -108,16 +109,22 @@
         },
         data() {
             return {
+                loading: false,
                 addEventSchema: {
-                    title: yup.string().required('What is the title of the event?'),
-                    time: yup.string().required('What time and day will the event take place?'),
-                    address: yup.string().required('Where is the event taking place?'),
-                    description: yup.string().required('What is the event about?')
+                    title: yup.string(),
+                    time: yup.string(),
+                    // address: yup.string().required('Where is the event taking place?'),
+                    description: yup.string().max(200, 'Too long!')
                 }
             }
         },
         methods: {
             onSubmit(values) {
+                this.loading = true;
+                this.$store.dispatch('events/addEvent', values).finally(() => {
+                    this.loading = false;
+                });
+
                 console.log(values);
             }
         }
