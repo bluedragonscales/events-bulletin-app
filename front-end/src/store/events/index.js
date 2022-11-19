@@ -3,7 +3,7 @@
 import {msgError, msgSuccess} from '../../tools/vuex.js';
 import {db} from '../../firebase.js';
 import router from '../../routes.js';
-import {doc, setDoc, collection} from 'firebase/firestore';
+import {doc, setDoc, collection, query, limit, orderBy, startAfter, getDocs} from 'firebase/firestore';
 
 
 let eventsCollection = collection(db, 'events');
@@ -12,7 +12,17 @@ const eventsModule = {
     namespaced: true,
     state() {
         return {
-
+            currentEvents: ''
+        }
+    },
+    getters: {
+        getAllEvents(state) {
+            return state.currentEvents;
+        }
+    },
+    mutations: {
+        setCurrentEvents(state, events) {
+            state.currentEvents = events;
         }
     },
     actions: {
@@ -35,6 +45,24 @@ const eventsModule = {
                 msgSuccess(commit, "Your event has been added!");
             } catch(error) {
                 msgError(commit, error);
+            }
+        },
+        async loadAllEvents({commit}) {
+            try {
+                const q = query(eventsCollection, orderBy("time", "asc"));
+                const querySnapshot = await getDocs(q);
+
+                const events = querySnapshot.docs.map(doc => ({
+                    id: doc.id,
+                    ...doc.data()
+                }));
+
+                commit('setCurrentEvents', events);
+
+                console.log(events);
+            } catch(error) {
+                msgError(commit, "Could not load the events.");
+                console.log(error);
             }
         }
     }

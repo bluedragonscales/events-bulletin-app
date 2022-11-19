@@ -7,7 +7,7 @@
 
 
         <div class="modal-body">
-            <Form @submit="onSubmit" :validation-schema="addEventSchema" class="text-center">
+            <Form @submit="onSubmit" :validation-schema="addEventSchema" class="text-center" ref="addEventForm">
                 <!-- EVENT TITLE INPUT -->
                 <div class="form-group mt-2">
                     <Field name="title" v-slot="{field, errors, errorMessage}">
@@ -120,13 +120,12 @@
             }
         },
         methods: {
-            onSubmit(values) {
+            onSubmit(values, {resetForm}) {
                 this.loading = true;
                 this.$store.dispatch('events/addEvent', values).finally(() => {
                     this.loading = false;
+                    resetForm();
                 });
-
-                console.log(values);
             }
         }
     }

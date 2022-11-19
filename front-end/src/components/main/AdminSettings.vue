@@ -40,18 +40,27 @@
 
 
 
-        <p class="mt-5 text-center">All the events!</p>
+        <p class="mt-5 text-center fs-5">All events:</p>
 
-        <ul class="mt-5 text-center">
-            <li>Your event 1</li>
-            <li>Your event 2</li>
-            <li>Your event 3</li>
-        </ul>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th>Event Title</th>
+                    <th>Event Host</th>
+                    <th>Event Date</th>
+                    <th></th>
+                </tr>
+                <tr v-for="(ev, index) in adminEvents" :key="index">
+                    <td>{{ev.title}}</td>
+                    <td>{{ev.host}}</td>
+                    <td>{{ev.time}}</td>
 
-
-
-
-        <button class="btn btn-dark btn-sm delete-account mb-4">Delete Account</button>
+                    <td>
+                        <button type="button" class="btn btn-dark btn-sm">Delete Event</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
 </template>
@@ -63,6 +72,7 @@
     import {Form, Field} from 'vee-validate';
     import * as yup from 'yup';
     import FormInput from '../utils/FormInput.vue';
+    import {mapActions} from 'vuex';
 
     export default {
         components: {
@@ -81,6 +91,20 @@
         methods: {
             onSubmit(values) {
                 console.log(values);
+            },
+            ...mapActions('events', [
+                'loadAllEvents'
+            ]),
+            removeById(id) {
+                console.log(id);
+            }
+        },
+        mounted() {
+            this.loadAllEvents();
+        },
+        computed: {
+            adminEvents() {
+                return this.$store.getters['events/getAllEvents'];
             }
         }
     }
@@ -104,10 +128,13 @@
         font-size: 0.9rem;
     }
 
-    .delete-account {
+    .table {
         position: relative;
-        left: 80%;
-        margin-top: 6rem;
+        width: 85%;
+        text-align: center;
+        left: 9%;
+        height: 2rem;
+        overflow-y: scroll;
     }
 
 </style>
