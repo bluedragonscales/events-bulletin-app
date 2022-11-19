@@ -1,11 +1,11 @@
 <template>
 
-    <article class="col-lg-4 col-sm-12" v-for="(event, index) in eventData" :key="index">
-        <h4>{{event.title}}</h4>
-        <h5>Event Host</h5>
-        <p>Date and time</p>
-        <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sapiente aliquam dolorem et quia facere dicta? Fuga nisi repellendus deserunt ipsa, unde cupiditate non culpa, repellat nihil harum soluta, cumque consectetur!</p>
-        <p v-if="isAdmin">User</p>
+    <article class="col-lg-4 col-sm-12" v-for="(ev, index) in currentEvents" :key="index">
+        <h4>{{ev.title}}</h4>
+        <h5>{{ev.host}}</h5>
+        <p>{{ev.time}}</p>
+        <p>{{ev.description}}</p>
+        <p v-if="isAdmin">{{ev.owner.email}}</p>
     </article>
 
 </template>
@@ -17,10 +17,11 @@
     import {mapGetters} from 'vuex';
 
     export default {
-        props: ['eventData'],
+        // props: ['eventData'],
         computed: {
             ...mapGetters({
-                isAdmin: 'auth/getAdminStatus'
+                isAdmin: 'auth/getAdminStatus',
+                currentEvents: 'events/getAllEvents'
             })
         }
     }

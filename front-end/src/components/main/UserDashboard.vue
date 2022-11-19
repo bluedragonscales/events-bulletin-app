@@ -18,7 +18,7 @@
 
         <!-- List of events. -->
         <section class="row g-2">
-            <event-block :eventData="events"></event-block>
+            <event-block></event-block>
         </section>
     </div>
 </template>
@@ -35,17 +35,17 @@
             EventBlock,
             AddEvent
         },
-        data() {
-            return {
-                events: [
-                    {title: 'Event One', address: '207 Maple St'},
-                    {title: 'Event Two', address: '207 Maple St'},
-                    {title: 'Event Three', address: '207 Maple St'},
-                    {title: 'Event Four', address: '207 Maple St'},
-                    {title: 'Event Five', address: '207 Maple St'},
-                ]
-            }
-        }
+        // data() {
+        //     return {
+        //         events: [
+        //             {title: 'Event One', address: '207 Maple St'},
+        //             {title: 'Event Two', address: '207 Maple St'},
+        //             {title: 'Event Three', address: '207 Maple St'},
+        //             {title: 'Event Four', address: '207 Maple St'},
+        //             {title: 'Event Five', address: '207 Maple St'},
+        //         ]
+        //     }
+        // }
     }
 
 </script>

@@ -51,19 +51,6 @@
                     </Field>
                 </div>
 
-                <!-- EVENT ADDRESS INPUT -->
-                <!-- <div class="form-group mt-5">
-                    <Field name="address" v-slot="{field, errors, errorMessage}">
-                        <form-input
-                            :field="field"
-                            :errorList="errors" 
-                            :errorMsg="errorMessage" 
-                            element="input"
-                            type="text"
-                            placeholder="Address of the event">
-                        </form-input>
-                    </Field>
-                </div> -->
 
 
                 <!-- EVENT DESCRIPTION INPUT -->
@@ -113,7 +100,6 @@
                 addEventSchema: {
                     title: yup.string(),
                     time: yup.string(),
-                    // address: yup.string().required('Where is the event taking place?'),
                     description: yup.string().max(200, 'Too long!'),
                     host: yup.string().max(30, 'Too long!')
                 }
