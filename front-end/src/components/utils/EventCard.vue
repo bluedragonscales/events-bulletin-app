@@ -6,6 +6,7 @@
         <p>{{ev.time}}</p>
         <p>{{ev.description}}</p>
         <p v-if="isAdmin">{{ev.owner.email}}</p>
+        <button v-if="isAdmin" type="button" class="btn btn-dark btn-sm">Delete Event</button>
     </article>
 
 </template>
@@ -17,7 +18,6 @@
     import {mapGetters} from 'vuex';
 
     export default {
-        // props: ['eventData'],
         computed: {
             ...mapGetters({
                 isAdmin: 'auth/getAdminStatus',

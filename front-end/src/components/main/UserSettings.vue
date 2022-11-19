@@ -40,13 +40,32 @@
 
 
 
-        <p class="mt-5 text-center">Update or delete the events you've created:</p>
+        <p class="mt-5 text-center">Update or delete your events</p>
 
-        <ul class="mt-5 text-center">
-            <li>Your event 1</li>
-            <li>Your event 2</li>
-            <li>Your event 3</li>
-        </ul>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th>Event Title</th>
+                    <th>Event Host</th>
+                    <th>Event Date</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr v-for="(ev, index) in yourEvents" :key="index">
+                    <td>{{ev.title}}</td>
+                    <td>{{ev.host}}</td>
+                    <td>{{ev.time}}</td>
+
+                    <td>
+                        <button type="button" class="btn btn-dark btn-sm">Delete</button>
+                    </td>
+
+                    <td>
+                        <button type="button" class="btn btn-dark btn-sm">Update</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
 
 
 
@@ -81,6 +100,9 @@
         methods: {
             onSubmit(values) {
                 console.log(values);
+            },
+            yourEvents() {
+                this.$store.getters['events/getYourEvents'];
             }
         }
     }
@@ -108,6 +130,15 @@
         position: relative;
         left: 80%;
         margin-top: 6rem;
+    }
+
+    .table {
+        position: relative;
+        width: 85%;
+        text-align: center;
+        left: 9%;
+        height: 2rem;
+        overflow-y: scroll;
     }
 
 </style>

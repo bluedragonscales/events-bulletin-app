@@ -14,12 +14,8 @@
                 <router-link to="/dashboard" class="nav-link text-white">Dashboard</router-link>
             </li>
 
-            <li class="nav-item fs-4" v-if="isAuth && !isAdmin">
+            <li class="nav-item fs-4" v-if="isAuth">
                 <router-link to="/settings" class="nav-link text-white">Settings</router-link>
-            </li>
-
-            <li class="nav-item fs-4" v-if="isAuth && isAdmin">
-                <router-link to="/admin/settings" class="nav-link text-white">Admin Settings</router-link>
             </li>
         </ul>
     </nav>

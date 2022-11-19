@@ -34,18 +34,7 @@
         components: {
             EventBlock,
             AddEvent
-        },
-        // data() {
-        //     return {
-        //         events: [
-        //             {title: 'Event One', address: '207 Maple St'},
-        //             {title: 'Event Two', address: '207 Maple St'},
-        //             {title: 'Event Three', address: '207 Maple St'},
-        //             {title: 'Event Four', address: '207 Maple St'},
-        //             {title: 'Event Five', address: '207 Maple St'},
-        //         ]
-        //     }
-        // }
+        }
     }
 
 </script>

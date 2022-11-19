@@ -12,17 +12,24 @@ const eventsModule = {
     namespaced: true,
     state() {
         return {
-            currentEvents: ''
+            currentEvents: '',
+            yourEvents: ''
         }
     },
     getters: {
         getAllEvents(state) {
             return state.currentEvents;
+        },
+        getYourEvents(state) {
+            return state.yourEvents;
         }
     },
     mutations: {
         setCurrentEvents(state, events) {
             state.currentEvents = events;
+        },
+        setUserEvents(state, events) {
+            state.yourEvents = events;
         }
     },
     actions: {
@@ -58,11 +65,17 @@ const eventsModule = {
                 }));
 
                 commit('setCurrentEvents', events);
-
-                console.log(events);
+                // console.log(events);
             } catch(error) {
                 msgError(commit, "Could not load the events.");
                 console.log(error);
+            }
+        },
+        async loadUserEvents({commit, dispatch}, payload) {
+            try {
+                
+            } catch(error) {
+                msgError(commit, "Could not load your events.");
             }
         }
     }
