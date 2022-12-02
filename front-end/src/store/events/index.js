@@ -13,24 +13,24 @@ const eventsModule = {
     state() {
         return {
             currentEvents: '',
-            // yourEvents: ''
+            yourEvents: ''
         }
     },
     getters: {
         getAllEvents(state) {
             return state.currentEvents;
         },
-        // getYourEvents(state) {
-        //     return state.yourEvents;
-        // }
+        getYourEvents(state) {
+            return state.yourEvents;
+        }
     },
     mutations: {
         setCurrentEvents(state, events) {
             state.currentEvents = events;
         },
-        // setUserEvents(state, events) {
-        //     state.yourEvents = events;
-        // }
+        setUserEvents(state, events) {
+            state.yourEvents = events;
+        }
     },
     actions: {
         async addEvent({commit, rootGetters}, payload) {
@@ -58,6 +58,7 @@ const eventsModule = {
             try {
                 const q = query(eventsCollection, orderBy("time", "asc"));
                 const querySnapshot = await getDocs(q);
+                // console.log(querySnapshot.docs);
 
                 const events = querySnapshot.docs.map(doc => ({
                     id: doc.id,

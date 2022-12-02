@@ -1,19 +1,14 @@
 <template>
 
-    <div v-if="currentEvents">
-        <article class="col-lg-4 col-sm-12" v-for="(ev, index) in currentEvents" :key="index">
-            <h4>{{ev.title}}</h4>
-            <h5>{{ev.host}}</h5>
-            <p>{{ev.time}}</p>
-            <p>{{ev.description}}</p>
-            <p v-if="isAdmin">{{ev.owner.email}}</p>
-            <button v-if="isAdmin" type="button" class="btn btn-dark btn-sm" @click="removeById(ev.id)">Delete Event</button>
-        </article>
-    </div>
+    <article class="col-lg-4 col-sm-12" v-for="(ev, index) in currentEvents" :key="index">
+        <h4>{{ev.title}}</h4>
+        <h5>{{ev.host}}</h5>
+        <p>{{ev.time}}</p>
+        <p>{{ev.description}}</p>
 
-    <div v-else class="no-events">
-        <h2>No Events Yet</h2>
-    </div>
+        <p v-if="isAdmin">{{ev.owner.email}}</p>
+        <button v-if="isAdmin" type="button" class="btn btn-dark btn-sm" @click="removeById(ev.id)">Delete Event</button>
+    </article>
 
 </template>
 

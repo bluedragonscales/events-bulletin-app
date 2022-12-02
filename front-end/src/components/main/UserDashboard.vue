@@ -30,11 +30,20 @@
 <script>
     import EventBlock from '../utils/EventCard.vue';
     import AddEvent from '../utils/AddEventModal.vue';
+    import {mapActions} from 'vuex';
 
     export default {
         components: {
             EventBlock,
             AddEvent
+        },
+        mounted() {
+            this.loadAllEvents();
+        },
+        methods: {
+            ...mapActions('events', [
+                'loadAllEvents'
+            ])
         }
     }
 
@@ -49,7 +58,6 @@
         margin-bottom: 1rem;
         max-height: 200vh;
         overflow-y: scroll;
-        border: 2px solid black;
     }
 
     .container {

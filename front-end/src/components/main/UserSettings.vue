@@ -42,7 +42,7 @@
 
         <p class="mt-5 text-center">Update or delete your events</p>
 
-        <!-- <table class="table table-striped">
+        <table class="table table-striped">
             <tbody>
                 <tr>
                     <th>Event Title</th>
@@ -65,7 +65,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table> -->
+        </table>
 
 
 
@@ -82,6 +82,7 @@
     import {Form, Field} from 'vee-validate';
     import * as yup from 'yup';
     import FormInput from '../utils/FormInput.vue';
+    import {mapGetters} from 'vuex';
 
     export default {
         components: {
@@ -94,16 +95,29 @@
                 updateProfileSchema: {
                     email: yup.string(),
                     password: yup.string()
-                }
+                },
+                eventData: ''
             }
         },
         methods: {
             onSubmit(values) {
                 console.log(values);
             },
-            // yourEvents() {
-            //     this.$store.getters['events/getYourEvents'];
-            // }
+            yourEvents() {
+                if(this.isAdmin) {
+                    this.allEvents;
+                    console.log(this.allEvents);
+                } else {
+                    this.userEvents;
+                }
+            }
+        },
+        computed: {
+            ...mapGetters({
+                isAdmin: 'auth/getAdminStatus',
+                allEvents: 'events/getAllEvents',
+                userEvents: 'events/getYourEvents'
+            })
         }
     }
 
