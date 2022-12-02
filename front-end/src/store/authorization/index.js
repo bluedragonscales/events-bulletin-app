@@ -36,7 +36,6 @@ const authModule = {
         },
         getUserData(state) {
             return state.user;
-            // Do I end up using this?
         }
     },
     mutations: {

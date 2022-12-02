@@ -42,7 +42,7 @@
 
         <p class="mt-5 text-center">Update or delete your events</p>
 
-        <table class="table table-striped">
+        <!-- <table class="table table-striped">
             <tbody>
                 <tr>
                     <th>Event Title</th>
@@ -65,7 +65,7 @@
                     </td>
                 </tr>
             </tbody>
-        </table>
+        </table> -->
 
 
 
@@ -101,9 +101,9 @@
             onSubmit(values) {
                 console.log(values);
             },
-            yourEvents() {
-                this.$store.getters['events/getYourEvents'];
-            }
+            // yourEvents() {
+            //     this.$store.getters['events/getYourEvents'];
+            // }
         }
     }
 

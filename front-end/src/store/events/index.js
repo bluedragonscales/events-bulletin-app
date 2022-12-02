@@ -3,7 +3,7 @@
 import {msgError, msgSuccess} from '../../tools/vuex.js';
 import {db} from '../../firebase.js';
 import router from '../../routes.js';
-import {doc, setDoc, collection, query, limit, orderBy, startAfter, getDocs} from 'firebase/firestore';
+import {doc, setDoc, collection, query, orderBy, getDocs, deleteDoc} from 'firebase/firestore';
 
 
 let eventsCollection = collection(db, 'events');
@@ -13,24 +13,24 @@ const eventsModule = {
     state() {
         return {
             currentEvents: '',
-            yourEvents: ''
+            // yourEvents: ''
         }
     },
     getters: {
         getAllEvents(state) {
             return state.currentEvents;
         },
-        getYourEvents(state) {
-            return state.yourEvents;
-        }
+        // getYourEvents(state) {
+        //     return state.yourEvents;
+        // }
     },
     mutations: {
         setCurrentEvents(state, events) {
             state.currentEvents = events;
         },
-        setUserEvents(state, events) {
-            state.yourEvents = events;
-        }
+        // setUserEvents(state, events) {
+        //     state.yourEvents = events;
+        // }
     },
     actions: {
         async addEvent({commit, rootGetters}, payload) {
@@ -65,17 +65,24 @@ const eventsModule = {
                 }));
 
                 commit('setCurrentEvents', events);
-                // console.log(events);
+                console.log(events);
             } catch(error) {
                 msgError(commit, "Could not load the events.");
                 console.log(error);
             }
         },
-        async loadUserEvents({commit, dispatch}, payload) {
+        async removeById({commit, state}, payload) {
             try {
-                
+                await deleteDoc(doc(db, "events", payload));
+
+                const newList = state.currentEvents.filter( x => {
+                    return x.id != payload;
+                });
+
+                commit("setCurrentEvents", newList);
+                msgSuccess(commit,'Event deleted!');
             } catch(error) {
-                msgError(commit, "Could not load your events.");
+                msgError(commit, error);
             }
         }
     }

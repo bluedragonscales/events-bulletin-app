@@ -6,6 +6,13 @@
         <!-- Button to trigger modal. -->
         <button type="button" class="btn btn-dark mt-3 mb-5" data-bs-toggle="modal" data-bs-target="#addEventModal">Add Event</button>
 
+
+        <!-- List of events. -->
+        <section class="row g-2">
+            <event-block></event-block>
+        </section>
+
+
         <!-- Modal -->
         <div class="modal fade" id="addEventModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -14,12 +21,6 @@
                 </div>
             </div>
         </div>
-
-
-        <!-- List of events. -->
-        <section class="row g-2">
-            <event-block></event-block>
-        </section>
     </div>
 </template>
 
@@ -48,6 +49,7 @@
         margin-bottom: 1rem;
         max-height: 200vh;
         overflow-y: scroll;
+        border: 2px solid black;
     }
 
     .container {
