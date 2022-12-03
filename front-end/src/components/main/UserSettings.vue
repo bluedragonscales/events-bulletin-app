@@ -45,7 +45,7 @@
         <table class="table table-striped">
             <tbody>
                 <tr>
-                    <th>Event Title</th>
+                    <th>Event Location</th>
                     <th>Event Host</th>
                     <th>Event Date</th>
                     <th></th>

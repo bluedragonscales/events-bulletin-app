@@ -2,7 +2,7 @@
     <div class="container">
         <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Add Your Event</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <button type="button" class="btn-close" onclick="javascript:window.location.reload()" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
 
 
@@ -17,7 +17,7 @@
                             :errorMsg="errorMessage" 
                             element="input"
                             type="text"
-                            placeholder="Title of the event">
+                            placeholder="Event Location">
                         </form-input>
                     </Field>
                 </div>
@@ -32,7 +32,7 @@
                             :errorMsg="errorMessage" 
                             element="input"
                             type="text"
-                            placeholder="Event host">
+                            placeholder="Event Host">
                         </form-input>
                     </Field>
                 </div>
@@ -62,7 +62,7 @@
                             :errorMsg="errorMessage" 
                             element="textarea"
                             :rows="10"
-                            placeholder="Description, time, and place of event.">
+                            placeholder="Description and time of event">
                         </form-input>
                     </Field>
                 </div>
@@ -100,7 +100,7 @@
                 addEventSchema: {
                     title: yup.string(),
                     time: yup.string(),
-                    description: yup.string().max(200, 'Too long!'),
+                    description: yup.string().max(500, 'Too long!'),
                     host: yup.string().max(30, 'Too long!')
                 }
             }

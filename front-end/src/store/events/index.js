@@ -3,7 +3,7 @@
 import {msgError, msgSuccess} from '../../tools/vuex.js';
 import {db} from '../../firebase.js';
 import router from '../../routes.js';
-import {doc, setDoc, collection, query, orderBy, getDocs, deleteDoc} from 'firebase/firestore';
+import {doc, setDoc, collection, query, orderBy, getDocs, deleteDoc, limit} from 'firebase/firestore';
 
 
 let eventsCollection = collection(db, 'events');
@@ -13,14 +13,14 @@ const eventsModule = {
     state() {
         return {
             currentEvents: '',
-            yourEvents: ''
+            userEvents: ''
         }
     },
     getters: {
         getAllEvents(state) {
             return state.currentEvents;
         },
-        getYourEvents(state) {
+        getUserEvents(state) {
             return state.yourEvents;
         }
     },
@@ -85,7 +85,16 @@ const eventsModule = {
             } catch(error) {
                 msgError(commit, error);
             }
-        }
+        },
+        // async loadUserEvents({commit}, payload) {
+        //     try {
+        //         const q = query(eventsCollection, orderBy("time", "asc"), limit(payload.owner.email));
+        //         const querySnapshot = await getDocs(q);
+
+        //     } catch(error) {
+        //         msgError(commit, error);
+        //     }
+        // }
     }
 }
 
