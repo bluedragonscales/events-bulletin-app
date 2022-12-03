@@ -8,10 +8,10 @@
         <Form @submit="onSubmit" :validation-schema="registerSchema" class="text-center">
 
             <!-- Name registration section. -->
-            <h5 class="mt-5">Your Name</h5>
-            <div class="d-flex justify-content-center">
+            <!-- <h5 class="mt-5">Your Name</h5> -->
+            <!-- <div class="d-flex justify-content-center"> -->
                 <!-- FIRST NAME INPUT -->
-                <div class="form-group m-3">
+                <!-- <div class="form-group m-3">
                     <Field name="firstname" v-slot="{field, errors, errorMessage}" :value="'Ky'">
                         <form-input
                             :field="field"
@@ -22,10 +22,10 @@
                             placeholder="First">
                         </form-input>
                     </Field>
-                </div>
+                </div> -->
 
                 <!-- LAST NAME INPUT -->
-                <div class="form-group m-3">
+                <!-- <div class="form-group m-3">
                     <Field name="lastname" v-slot="{field, errors, errorMessage}" :value="'Kar'">
                         <form-input
                             :field="field"
@@ -36,8 +36,8 @@
                             placeholder="Last">
                         </form-input>
                     </Field>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
             
 
 

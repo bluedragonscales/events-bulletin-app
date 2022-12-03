@@ -7,7 +7,7 @@
         <p>{{ev.description}}</p>
 
         <p v-if="isAdmin">{{ev.owner.email}}</p>
-        <button v-if="isAdmin" type="button" class="btn btn-dark btn-sm" @click="removeById(ev.id)">Delete Event</button>
+        <button v-if="(isAdmin || yourData.email == ev.owner.email)" type="button" class="btn btn-dark btn-sm" @click="removeById(ev.id)">Delete Event</button>
     </article>
 
 </template>
@@ -22,7 +22,8 @@
         computed: {
             ...mapGetters({
                 isAdmin: 'auth/getAdminStatus',
-                currentEvents: 'events/getAllEvents'
+                currentEvents: 'events/getAllEvents',
+                yourData: 'auth/getUserData'
             })
         },
         methods: {

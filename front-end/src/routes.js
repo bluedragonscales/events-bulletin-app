@@ -6,7 +6,7 @@ import TermsOfUse from './components/main/TermsOfUse.vue';
 import Register from './components/main/AppRegister.vue';
 import Contact from './components/main/ContactQuestions.vue';
 import Dashboard from './components/main/UserDashboard.vue';
-import Settings from './components/main/UserSettings.vue';
+// import Settings from './components/main/UserSettings.vue';
 import {onAuthStateChanged} from 'firebase/auth';
 import {fireAuth} from './firebase.js';
 import Store from './store';
@@ -20,7 +20,7 @@ const routes = createRouter({
         {path: '/register', component: Register, meta: {home: true}},
         {path: '/contact', component: Contact},
         {path: '/dashboard', component: Dashboard, meta: {auth: true}},
-        {path: '/settings', component: Settings, meta: {auth: true}}
+        // {path: '/settings', component: Settings, meta: {auth: true}}
     ]
 });
 
