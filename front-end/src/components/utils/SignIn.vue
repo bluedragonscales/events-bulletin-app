@@ -37,7 +37,7 @@
             <button type="submit" class="btn btn-dark mt-5">Sign In</button>
         </Form>
 
-        <p class="text-center forgot">Forgot your password? <span>Click here!</span></p>
+        <!-- <p class="text-center forgot">Forgot your password? <span>Click here!</span></p> -->
     </div>
 
 </template>

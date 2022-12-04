@@ -152,7 +152,21 @@ const authModule = {
             } catch(error) {
                 msgError(commit, error.code);
             }
-        }
+        },
+        // async deleteAccount({commit}, payload) {
+        //     try {
+        //         const docSnap = await getDoc(doc(db, 'users', payload));
+                
+        //         if(docSnap.exists()) {
+        //             return docSnap.data();
+        //         } else {
+        //             return null;
+        //         }
+        //     } catch(error) {
+        //         console.log(error);
+        //         msgError(commit);
+        //     }
+        // }
     }
 }
 
