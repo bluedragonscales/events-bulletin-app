@@ -115,12 +115,12 @@
         data() {
             return {
                 registerSchema: {
-                    firstname: yup.string()
-                        .required('Your first name is required.')
-                        .max(30, 'No longer than 30 characters.'),
-                    lastname: yup.string()
-                        .required('Your last name is required.')
-                        .max(30, 'No longer than 30 characters.'),
+                    // firstname: yup.string()
+                    //     .required('Your first name is required.')
+                    //     .max(30, 'No longer than 30 characters.'),
+                    // lastname: yup.string()
+                    //     .required('Your last name is required.')
+                    //     .max(30, 'No longer than 30 characters.'),
                     email: yup.string()
                         .required('An email is required.')
                         .email('Not a valid email.')

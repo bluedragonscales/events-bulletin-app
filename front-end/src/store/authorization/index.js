@@ -1,7 +1,7 @@
 // AUTHORIZATION MODULE
 /* eslint-disable */
 import {db, fireAuth} from '../../firebase.js';
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword} from 'firebase/auth';
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, isEmailVerified} from 'firebase/auth';
 import {doc, setDoc, getDoc} from 'firebase/firestore';
 import router from '../../routes';
 import {msgError, msgSuccess} from '../../tools/vuex.js';
@@ -44,6 +44,9 @@ const authModule = {
                 ...state.user,
                 ...payload
             }
+            // state.auth = true;
+        },
+        setAuthStatus(state) {
             state.auth = true;
         },
         clearUser(state) {
@@ -62,23 +65,27 @@ const authModule = {
                     payload.password
                 );
 
-                console.log(userCredentials);
-
                 const newUser = {
                     uid: userCredentials.user.uid,
                     email: userCredentials.user.email,
                     isAdmin: false
                 };
-
+    
                 await setDoc(doc(db, 'users', userCredentials.user.uid), newUser);
-
+    
                 commit('setUser', newUser);
                 msgSuccess(commit, "Welcome to Eat, Drink, What!");
 
-                router.push('/dashboard');
+                if(newUser != null) {
+                    router.push('/');
+                    sendEmailVerification(userCredentials.user);
+                }
+
+                // router.push('/dashboard');
 
             } catch(error) {
                 msgError(commit, fbErrors(error.code));
+                console.log(error);
             } finally {
                 commit('notify/setLoadingState', false, {root: true});
             }
@@ -108,9 +115,14 @@ const authModule = {
                 );
 
                 const userData = await dispatch('getUserProfile', userCredentials.user.uid);
-                console.log(userData);
-                commit('setUser', userData);
 
+                if(userData.isEmailVerified()) {
+                    commit('setAuthStatus');
+                }
+
+                console.log(userData);
+
+                commit('setUser', userData);
                 router.push('/dashboard');
 
             } catch(error) {

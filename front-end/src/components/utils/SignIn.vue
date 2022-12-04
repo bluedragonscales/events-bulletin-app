@@ -72,6 +72,7 @@
         },
         methods: {
             onSubmit(values) {
+                console.log(values);
                 this.$store.dispatch('auth/signIn', values);
             }
         }
