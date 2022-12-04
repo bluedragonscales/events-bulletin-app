@@ -270,6 +270,37 @@
 
         <!-- THIRTEENTH SECTION -->
         <h3 id="thirteen">13) Dispute Resolution Section</h3>
+        <h4>In the unlikely event that we have a legal dispute, here is how the Parties agree to proceed, except where prohibited by applicable law.</h4>
+
+        <p>Any subsection in this Dispute Resolution Section that is prohibited by law shall not apply to the users residing in that jurisdiction.</p>
+
+        <h6 class="text-center">INFORMAL DISPUTE RESOLUTION SECTION</h6>
+
+        <p>If you are dissatisfied with our Service for any reason, please contact us through the Questions link in the footer first so we can try to resolve your concerns without the need of outside assistance. If you choose to puruse a dispute, claim, or controversy against Eat, Drink, What!, these terms will apply. For purposes of this dispute resolution process and arbitration procedures set forth in section 13 Eat, Drink, What! shall include our affiliates, employees, licensors, and service providers.</p>
+
+        <p>Eat, Drink, What! values its relationship with you and appreciates the mutual benefit realized from informally resolving disputes (as defined below). Before formally pursuing a dispute in arbitration or small claims court, you agree to first send a detailed notice to Eat, Drink, What! through the Question link in the footer, which will be forwarded to our legal counsel. If Eat, Drink, What! has a dispute with you, Eat, Drink, What! agrees to first send a notice to you at your most recent email address on file with us.</p>
+
+        <p>Your notice must contain all of the following information, and Eat, Drink, What! will include the same information and signature if the dispute originates from the Service:</p>
+
+        <ul>
+            <li>your full name</li>
+            <li>information that enables Eat, Drink, What! to identify your account, including a picture or screenshot of your profile, your address, mobile phone number, email address, and date of birth you used to register your account</li>
+            <li>a detailed description of your dispute, including the nature and factual basis of your claim</li>
+            <li>the relief you are personally seeking with a corresponding calculation of your alleged damages(if any)</li>
+            <li>your signature on this dispute notice</li>
+        </ul>
+
+        <p>You and Eat, Drink, What! agree to then negotiate in good faith in an effort to resolve the dispute. As part of these good faith negotiations, if Eat, Drink, What! requests a telephone conference with you to discuss your dispute, you agree to personally participate, with your attorney, if you are represented by counsel. Likewise, if you request a telephone conference to discuss Eat, Drink, What!'s dispute with you, Eat, Drink, What! agrees to have one representative participate</p>
+
+        <p>This informal process should lead to a resolution of the dispute. However, if the dispute is not resolved within 60 days after receipt of a fully completed notice and the Parties have not otherwise mutually agreed to an extension of this informal dispute resolution time period, you or Eat, Drink, What! may initiate an arbitration (subject to a Party's right to elect small claims court as provided below).</p>
+
+        <p>Completion of this informal dispute resolution is a condition precedent to filing any demand for arbitration or small claims court action. Failure to do so is a breach of this Agreement. The statute of limitations and any filing fee deadlines will be tolled while you and Eat, Drink, What! engage in this informal dispute resolution process. Unless prohibited by applicable law, the arbitration provider, National Arbitration and Mediation ("NAM"), shall not accept or administer any demand for arbitration and shall administratively close any arbitration unless the Party bringing such demand for arbitration can certify in writing that the terms and conditions of this informal dispute resolution process were fully satisfied. A court of competent jurisdiction shall have authority to enforce this provision and to enjoin any arbitration proceeding or small claims court action.</p>
+
+        <h6 class="text-center">INDIVIDUAL RELIEF: CLASS ACTION AND JURY TRIAL WAIVER</h6>
+
+        <p>To the fullest extent allowable by law, you and Eat, Drink, What! each waive the right to a jury trial and the right to litigate disputes in court in favor of individual arbitration (except for small claims court as provided above). You and Eat, Drink, What! each waive the right to file or participate in a class action against the other or otherwise to seek relief on a class basis, including any currently pending actions against Eat, Drink, What!</p>
+
+        <p>To the fullest extent allowable by law, there shall be no right or authority for any claims to be arbitrated or litigated on a class, collective, representative, consolidated, or private attorney general basis.</p>
 
     </div>
 
