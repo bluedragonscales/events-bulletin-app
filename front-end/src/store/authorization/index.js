@@ -1,7 +1,7 @@
 // AUTHORIZATION MODULE
 /* eslint-disable */
 import {db, fireAuth} from '../../firebase.js';
-import {createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification, isEmailVerified} from 'firebase/auth';
+import {createUserWithEmailAndPassword, signInWithEmailAndPassword, sendEmailVerification} from 'firebase/auth';
 import {doc, setDoc, getDoc} from 'firebase/firestore';
 import router from '../../routes';
 import {msgError, msgSuccess} from '../../tools/vuex.js';
@@ -46,9 +46,9 @@ const authModule = {
             }
             // state.auth = true;
         },
-        setAuthStatus(state) {
-            state.auth = true;
-        },
+        // setAuthStatus(state) {
+        //     state.auth = !state.auth;
+        // },
         clearUser(state) {
             state.user = DEFAULT_USER;
             state.auth = false;
@@ -74,14 +74,12 @@ const authModule = {
                 await setDoc(doc(db, 'users', userCredentials.user.uid), newUser);
     
                 commit('setUser', newUser);
-                msgSuccess(commit, "Welcome to Eat, Drink, What!");
+                msgSuccess(commit, "Thanks! A verification request has been sent to your email.");
 
                 if(newUser != null) {
                     router.push('/');
                     sendEmailVerification(userCredentials.user);
                 }
-
-                // router.push('/dashboard');
 
             } catch(error) {
                 msgError(commit, fbErrors(error.code));
@@ -93,7 +91,7 @@ const authModule = {
         async getUserProfile({commit}, payload) {
             try {
                 const docSnap = await getDoc(doc(db, 'users', payload));
-
+                
                 if(docSnap.exists()) {
                     return docSnap.data();
                 } else {
@@ -104,25 +102,29 @@ const authModule = {
                 msgError(commit);
             }
         },
-        async signIn({commit, dispatch}, payload) {
+        async signIn({commit, dispatch, state}, payload) {
             try {
                 commit('notify/setLoadingState', true, {root: true});
+
 
                 const userCredentials = await signInWithEmailAndPassword(
                     fireAuth,
                     payload.email,
                     payload.password
                 );
+                // console.log("USERCREDS", userCredentials);
+                // console.log("USERCREDS", userCredentials.user.emailVerified);
 
                 const userData = await dispatch('getUserProfile', userCredentials.user.uid);
+                // console.log("USERDATA", userData);
 
-                if(userData.isEmailVerified()) {
-                    commit('setAuthStatus');
+                if(userCredentials.user.emailVerified) {
+                    // console.log("USERDATA2", userData);
+                    commit('setUser', userData);
+                    // commit('setAuthStatus');
+                    state.auth = true;
                 }
 
-                console.log(userData);
-
-                commit('setUser', userData);
                 router.push('/dashboard');
 
             } catch(error) {
@@ -145,6 +147,7 @@ const authModule = {
                 await fireAuth.signOut();
                 msgSuccess(commit, 'Later, alligator!');
                 commit('clearUser');
+                // commit('setAuthStatus');
                 router.push("/");
             } catch(error) {
                 msgError(commit, error.code);

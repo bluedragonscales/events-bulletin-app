@@ -7,7 +7,7 @@
         <Form @submit="onSubmit" :validation-schema="signInSchema" class="text-center">
             <!-- EMAIL INPUT -->
             <div class="form-group mt-3">
-                <Field name="email" v-slot="{field, errors, errorMessage}" :value="'dragon@gmail.com'">
+                <Field name="email" v-slot="{field, errors, errorMessage}" :value="'kckarnoski@gmail.com'">
                     <form-input
                         :field="field"
                         :errorList="errors" 
