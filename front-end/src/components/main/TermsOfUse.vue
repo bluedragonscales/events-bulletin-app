@@ -4,7 +4,7 @@
     <div class="container p-5">
         <h2 id="top">Terms of Use</h2>
 
-        <p class="mb-4">Last revised on October 03, 2022</p>
+        <p class="mb-4">Last revised on December 06, 2022</p>
 
         <p>Welcome to Eat, Drink, What! ("us", "we", the "Company", the "Service", or "Eat, Drink, What!"). Together, you and Eat, Drink, What! may be referred to as the "Parties" or separately as "Party."</p>
 
@@ -300,7 +300,23 @@
 
         <p>To the fullest extent allowable by law, you and Eat, Drink, What! each waive the right to a jury trial and the right to litigate disputes in court in favor of individual arbitration (except for small claims court as provided above). You and Eat, Drink, What! each waive the right to file or participate in a class action against the other or otherwise to seek relief on a class basis, including any currently pending actions against Eat, Drink, What!</p>
 
-        <p>To the fullest extent allowable by law, there shall be no right or authority for any claims to be arbitrated or litigated on a class, collective, representative, consolidated, or private attorney general basis.</p>
+        <p>To the fullest extent allowable by law, there shall be no right or authority for any claims to be arbitrated or litigated on a class, collective, representative, consolidated, or private attorney general basis. The arbitrator can award the same relief available in court provided that the arbitrator may only award final relief (including injunctive or declaratory relief) in favor of the individual party seeking relief and only to the extent necessary to provide final relief warranted by that individual Party's claim.</p>
+
+        <p>The arbitrator may not award final relief for, against, or on behalf of anyone who is not a Party to the arbitration on a class, collective, representative, or private attorney general basis. If a court determines that any of these prohibitions in this paragraph are unenforceable as to a particular claim or request for relief (such as a request for public injunctive relief), and all appeals of that decision are exhausted or the decision is otherwise final, then you and Eat, Drink, What! agree that that particular claim or request for relief shall proceed in court but shall be stayed pending individual arbitration of the remaining claims of relief that you have brought.</p>
+
+        <p>If this specific sub-section is found to be unenforceable, then the entirety of this arbitration provision (except the jury trial waiver and the informal dispute resolution process) shall be null and void. This sub-section is an essential part of this arbitration agreement.</p>
+
+        <h6 class="text-center">DISPUTE RESOLUTION THROUGH ARBITRATION OR SMALL CLAIMS COURT</h6>
+
+        <p>Any dispute, claim, or controversy between you and Eat, Drink, What! (that is not resolved informally by Eat, Drink, What! or as provided under the sub-section above) that arises from or relates in any way to this agreement (including any alleged breach of this agreement), the Service, or our relationship with you (collectively, "Dispute"), shall be exclusively resolved through <strong>binding individual arbitration</strong> except as specifically provided otherwise in this dispute resolution section. "Dispute" as used in this agreement shall have the broadest possible meaning and include claims that arose before the existence of this or any prior agreement and claims that arise during the term of this agreement or after the termination of this agreement. Notwithstanding the foregoing, either you or Eat, Drink, What! may elect to have an individual claim heard in small claims court.</p>
+
+        <p>If the request to proceed in small claims court is made after an arbitration has been initiated but before an arbitrator has been appointed, such arbitration shall be administratively closed. Any controversy over the small claims court's jurisdiction shall be determined by the small claims court. All other issues (except as otherwise provided herein) are exclusively for the arbitrator to decide, including but not limited to scope and enforceability of this dispute resolution section, as well as any request to proceed in small claims court that is made after an arbitrator has been appointed.</p>
+
+        <p>If you or Eat, Drink, What! challenges the small claims court election in your dispute, and a court of competent jurisdiction determines that the small claims court election is unenforceable, then such election shall be severed from this agreement as to your dispute. However, such court determination shall not be considered or deemed binding with respect to Eat, Drink, What!'s other contracting parties.</p>
+
+        <p>Any court proceeding to enforce this dispute resolution section 13, including any proceeding to confirm, modify, or vacate an arbitration award, must be commenced in accordance with section 15. In the event dispute resolution section 13 is for any reason held to be unenforceable, any litigation against Eat, Drink, What! (except for small claims court actions) may be commenced only in the federal or state courts located in Dallas County, Texas. You hereby irrevocably consent to those courts' exercise of personal jurisdiction over you for such purposes and waive any claim that such courts constitute an inconvenient forum.</p>
+
+        <h6 class="text-center">INDIVIDUAL ARBITRATION AND MASS ARBITRATION PROTOCOLS</h6>
 
     </div>
 
