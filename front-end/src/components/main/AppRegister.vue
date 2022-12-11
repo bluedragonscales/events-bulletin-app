@@ -81,7 +81,7 @@
             <div class="d-flex justify-content-center">
                 <!-- PASSWORD INPUT -->
                 <div class="form-group m-3">
-                    <Field name="password" v-slot="{field, errors, errorMessage}" :value="'dragonss'">
+                    <Field name="password" v-slot="{field, errors, errorMessage}">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -95,9 +95,25 @@
             </div>
 
 
+            <div class="d-flex justify-content-center">
+                <!-- ToU CHECKBOX -->
+                <div class="form-group m-5">
+                    <Field name="check" v-slot="{field, errors, errorMessage}" :value="false">
+                        <form-input
+                            :field="field"
+                            :errorList="errors" 
+                            :errorMsg="errorMessage" 
+                            element="input"
+                            type="checkbox">
+                        </form-input>
+                    </Field>
+                    <label for="check">I have read the Terms of Use</label>
+                </div>
+            </div>
+
 
             <!-- SUBMIT BUTTON -->
-            <button type="submit" class="btn btn-dark mt-5 mb-5">Register</button>
+            <button type="submit" class="btn btn-dark mt-4 mb-5">Register</button>
         </Form>
     </div>
 
@@ -132,7 +148,8 @@
                     password: yup.string()
                         .required('A password is required.')
                         .min(8, 'Must be 8 or more characters.')
-                        .max(30, 'No longer than 30 characters.')
+                        .max(30, 'No longer than 30 characters.'),
+                    check: yup.bool().oneOf([true], 'Please read our Terms of Use.')
                 }
             }
         },
