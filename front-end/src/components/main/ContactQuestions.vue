@@ -6,7 +6,7 @@
 
         <p class="text-center">Use this form to contact us for questions or problems.</p>
 
-        <Form @submit="onSubmit" :validation-schema="contactSchema" class="text-center">
+        <Form :validation-schema="contactSchema" class="text-center" action="mailto:events@eatdrinkwhat.com" method="post" enctype="text/plain">
             <div class="d-flex justify-content-center">
                 <!-- EMAIL INPUT -->
                 <div class="form-group m-3">
@@ -96,7 +96,8 @@
                         .email('Not a valid email.')
                         .max(50, 'No longer than 50 characters.'),
                     name: yup.string()
-                        .max(50, 'Too long!'),
+                        .max(50, 'Too long!')
+                        .required('How do we address you?'),
                     title: yup.string()
                         .required('What is the topic?')
                         .max(100, 'Too long!'),
@@ -111,11 +112,6 @@
             FormInput,
             Form,
             Field
-        },
-        methods: {
-            onSubmit(values) {
-                console.log(values);
-            }
         }
     }
 
