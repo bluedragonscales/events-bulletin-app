@@ -318,6 +318,30 @@
 
         <h6 class="text-center">INDIVIDUAL ARBITRATION AND MASS ARBITRATION PROTOCOLS</h6>
 
+        <p>This subsection applies to Disputes that are submitted to NAM (National Arbitration and Mediation) after fully completing the informal notice and dispute resolution process described in subsection INFORMAL DISPUTE RESOLUTION PROCESS above and when no small claims court election is made by either Party. Any arbitration between you and Eat, Drink, What! shall be administered by NAM in accordance with NAM's operative Comprehensive Dispute Resolution Rules and Procedures (the "NAM" rules) in effect at the time any demand for arbitration is filed with NAM, as modified by this section 13. For a copy of the NAM rules, please visit https://www.namadr.com/resources/rules-fees-forms or contact NAM's National Processing Center at 990 Stewart Avenue, 1st Floor, Garden City, NY 11530 and email address commercial@namadr.com.</p>
+
+        <p>If NAM is unable or unwilling to perform its duties under this agreement, the Parties shall mutually agree on an alternative administor that will replace NAM and assume NAM's role consistent with this agreement. If the Parties are unable to agree, they will petition a court of competent jurisdiction to appoint an administrator that will assume NAM's duties under this agreement.</p>
+
+        <p>The Parties agree that the following procedures will apply to any arbitrations initiated under this dispute resolution section 13:</p>
+
+        <h6>1) Commencing an Arbitration</h6>
+        <p>To initiate an arbitration, you or Eat, Drink, What! shall send to NAM a demand for arbitration ("Demand for Arbitration") that describes the claim(s) and request for relief in detail, consistent with the requirements in this agreement and NAM rules. If you send a Demand for Arbitration, you shall also send it to Eat, Drink, What! at events@eatdrinkwhat.com within 10 days of delivery of the Demand for Arbitration to NAM. If Eat, Drink, What! sends a Demand for Arbitration, we will also send it to your email address on file with us within the same 10 day period. The arbitration provider shall not accept or administer any demand for arbitration and shall administratively close any such demand for arbitration that fails to certify in writing that the Party meets the requirements of dispute resolution section 13 or if either Party elects small claims court as set forth above.</p>
+
+        <h6>2) Fees</h6>
+        <p>The payment of all fees shall be governed by the NAM rules, except to the extent that the case is a part of a mass filing (as defined below) or the NAM fees and costs (including arbitrator fees) paid by either Party are reallocated upon order of the arbitrator following a determination that (a) either Party breached section 13 of this agreement, (b) such reallocation is called for under this agreement, or (c) reallocation is otherwise permitted under applicable law. Upon a showing to Eat, Drink, What! of your financial hardship we will consider a good faith request made by you to pay your portion of the applicable consumer portion of the filing fee. Eat, Drink, What! is committed to ensuring that arbitration costs to consumers do not serve as a barrier to the adjudication of disputes. If Eat, Drink, What! initiates an arbitration against you, we shall pay all fees.</p>
+
+        <h6>3) The Arbitrator</h6>
+        <p>The arbitration shall be conducted by a single, neutral arbitrator (the "Claim Arbitrator"), as assisted by any process arbitrator appointed under NAM rules. (The term "Arbitrator" applies to both the claim arbitrator and the process arbitrator). If a hearing is elected by either Party, the arbitrator shall be in or close to the location in which you reside. The arbitrator is bound by and shall adhere to this agreement. In the event NAM rules conflict with this agreement, the terms of this agreement shall control. If the arbitrator determines that strict application of any term of section 13 of this agreement (except for the small claims election, which shall be determined by the small claims court) would result in a fundamentally unfair arbitration (the "Unfair Term"), then the arbitrator shall have authority to modify the Unfair Term to the extent necessary to ensure a fundamentally fair arbitration that is consistent with the agreement (the "Modified Term"). In determining the substance of a Modified Term, the arbitrator shall select a term that comes closest to expressing the intention of the Unfair Term.</p>
+
+        <h6>4) Dispositive Motions</h6>
+        <p>The Parties agree that the Claim Arbitrator shall have the authority to consider dispositive motions without an oral evidentiary hearing.</p>
+
+
+
+        <a href="#top">Back to Top</a>
+        <hr>
+        <!-- FOURTEENTH SECTION -->
+
     </div>
 
 </template>
