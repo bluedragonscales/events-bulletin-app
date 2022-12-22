@@ -96,9 +96,9 @@
 
 
             <div class="d-flex justify-content-center">
-                <!-- ToU CHECKBOX -->
+                <!-- TERMS CHECKBOX -->
                 <div class="form-group m-5">
-                    <Field name="check" v-slot="{field, errors, errorMessage}" :value="false">
+                    <!-- <Field name="check" v-slot="{field, errors, errorMessage}" :value="false">
                         <form-input
                             :field="field"
                             :errorList="errors" 
@@ -106,7 +106,8 @@
                             element="input"
                             type="checkbox">
                         </form-input>
-                    </Field>
+                    </Field> -->
+                    <input type="checkbox" id="checked" class="me-2">
                     <label for="check">I have read the Terms of Use</label>
                 </div>
             </div>
@@ -142,14 +143,13 @@
                         .email('Not a valid email.')
                         .max(30, 'No longer than 30 characters.'),
                     birthdate: yup.date()
-                        .required('A birthday is required.')
+                        .required('A birthday is required.'),
                         // 567,648,000 seconds in 18 years.
-                        .max(new Date(), 'You must be at least 18 years old.'),
+                        // .max(new Date(), 'You must be at least 18 years old.'),
                     password: yup.string()
                         .required('A password is required.')
                         .min(8, 'Must be 8 or more characters.')
-                        .max(30, 'No longer than 30 characters.'),
-                    check: yup.bool().oneOf([true], 'Please read our Terms of Use.')
+                        .max(30, 'No longer than 30 characters.')
                 }
             }
         },
@@ -160,8 +160,24 @@
         },
         methods: {
             onSubmit(values) {
-                console.log(values);
-                this.$store.dispatch('auth/signUp', values);
+                // console.log(values.password);
+                // console.log(values.birthdate);
+                let birth = values.birthdate.valueAsNumber;
+                // let birthMillSec = birth.valueAsNumber;
+                console.log(birth);
+                // console.log(birthMillSec);
+                let terms = document.getElementById('checked');
+
+                if(values.password.includes(' ')){
+                    alert("Passwords cannot contain spaces.");
+                } else if(!terms.checked) {
+                    alert("Please make sure to read the terms of use and check the box.");
+                } else if(birth < 567648000) {
+                    alert("You must be at least 18 years of age to register.");
+                }
+                else {
+                    this.$store.dispatch('auth/signUp', values);
+                }
             }
         }
     }
