@@ -91,8 +91,9 @@ const authModule = {
         async getUserProfile({commit}, payload) {
             try {
                 const docSnap = await getDoc(doc(db, 'users', payload));
-                
+                // console.log("HERE", docSnap.data());
                 if(docSnap.exists()) {
+                    console.log("HERE", docSnap.data());
                     return docSnap.data();
                 } else {
                     return null;
@@ -112,11 +113,11 @@ const authModule = {
                     payload.email,
                     payload.password
                 );
-                // console.log("USERCREDS", userCredentials);
-                // console.log("USERCREDS", userCredentials.user.emailVerified);
+                console.log("USERCREDS", userCredentials);
+                //console.log("USERCREDS", userCredentials.user.emailVerified);
 
                 const userData = await dispatch('getUserProfile', userCredentials.user.uid);
-                // console.log("USERDATA", userData);
+                console.log("USERDATA", userData);
 
                 if(userCredentials.user.emailVerified) {
                     // console.log("USERDATA2", userData);
@@ -124,6 +125,8 @@ const authModule = {
                     // commit('setAuthStatus');
                     state.auth = true;
                 }
+
+                // console.log("HERE", docSnap.data());
 
                 router.push('/dashboard');
 
@@ -136,6 +139,7 @@ const authModule = {
         async autoSignIn({commit, dispatch}, payload) {
             try {
                 const userData = await dispatch('getUserProfile', payload.uid);
+                console.log("AUTO", userData);
                 commit('setUser', userData);
                 return true;
             } catch(error) {
@@ -153,20 +157,20 @@ const authModule = {
                 msgError(commit, error.code);
             }
         },
-        // async deleteAccount({commit}, payload) {
-        //     try {
-        //         const docSnap = await getDoc(doc(db, 'users', payload));
+        async deleteAccount({commit}, payload) {
+            try {
+                const docSnap = await getDoc(doc(db, 'users', payload));
                 
-        //         if(docSnap.exists()) {
-        //             return docSnap.data();
-        //         } else {
-        //             return null;
-        //         }
-        //     } catch(error) {
-        //         console.log(error);
-        //         msgError(commit);
-        //     }
-        // }
+                if(docSnap.exists()) {
+                    return docSnap.data();
+                } else {
+                    return null;
+                }
+            } catch(error) {
+                console.log(error);
+                msgError(commit);
+            }
+        }
     }
 }
 
