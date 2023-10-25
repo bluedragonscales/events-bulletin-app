@@ -1,0 +1,48 @@
+### User Stories
+
+- Users
+    - As a user, I want to be able to create an account so that I can use the application.
+    - As a user, I want to be able to log in to my account so that I can see and post events on the bulletin board.
+    - As a user, I want to be able to view the details of events other people have posted so that I can join them.
+    - As a user, I want to be able to create an event to post to the bulletin board so that I can let other users see it.
+    - As a user, I want to be able to delete my own events so that I can cancel if things change.
+    - As a user, I want to be able to update my email address so that I can keep my information up to date.
+    - As a user, I want to be able to update my password so that I can keep my account secure.
+    - As a user, I want to be able to send a message to the moderators so that I can get help resolving issues.
+    - As a user, I want to be able to log out of my account so that I can prevent anyone else from using it.
+
+- Moderators
+    - As a moderator, I want to be able to log into the moderator side of the application.
+    - As a moderator, I want to be able to see the email of the person who created the event so that I can keep track in case there is trouble.
+    - As a moderator, I want to be able to delete any event so that I can make sure there is nothing offensive or illegal posted on the bulletin board.
+    - As a moderator, I want to be able to change a user into a moderator, so that I can recruit help in moderating the application.
+    - As a moderator, I want to be able to create my own events so that I can enjoy the application the same way as the users.
+    - As a moderator, I want to be able to update my email address so that I can keep my information up to date.
+    - As a moderator, I want to be able to update my password so that I can keep my account secure.
+    - As a moderator, I want to be able to check messages from the users so that I can help resolve their issues.
+    - As a moderator, I want to be able to delete a registered user from the application so that I can keep them from continuous malicious behavior.
+    - As a moderator, I want to be able to ban an email from re-registering an account with the application so that I can keep a user from returning to cause malicious behavior.
+    - As a moderator, I want to be able to log out so that I can prevent anyone else from using it.
+
+- System
+    - As the system, I should reject the attempts of a user to register an account with an email that was banned by the moderators.
+    - As the system, I should reject login attempts with emails that are not registered or could be malicious information.
+    - As the system, I should reject login attempts with passwords that are wrong or could be malicious information.
+    - As the system, I should reject events that are created with specific key words such as offensive language.
+    - As the system, I should keep a user logged into their account until they clear their cookie cache or click the log out button.
+
+
+
+### Technologies
+- Python
+- PyCharm
+- AWS
+- DBeaver
+- PostgreSQL
+- pytest
+- psycopg binary
+- Flask
+- behave
+- Gherkin
+- Cucumber
+- selenium
