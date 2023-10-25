@@ -4,11 +4,12 @@
     <div class="home-container row d-flex align-items-center">
         <!-- Essay about the site. -->
         <div class="col-lg-7 col-sm-12 about">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa repellat eos temporibus maiores dolorem nobis quibusdam, soluta sequi sint obcaecati officia distinctio beatae esse natus ipsam molestias excepturi a minus.</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quod distinctio amet, deserunt error quibusdam eligendi voluptate accusamus quis suscipit libero illo. Aliquid amet, labore corrupti quam laudantium voluptatem ipsum?</p>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex corrupti optio reprehenderit. Deserunt autem fugiat officiis vero. Officia, laudantium fuga possimus tempora asperiores dicta doloribus velit voluptatibus? Nemo, natus veritatis?</p>
+            
+            <p>Eat, Drink, What! is an app made for bringing people together and having fun about town, whether that be with food, drink, or summersaults at the park! Once you create an account you have access 
+                to a bulletin board of events posted by others who also have an account. You'll be able to see the title of the event, the location, the date, and the time. The host of the event might choose to 
+                keep their identity hidden, but that just means you might make some new and unexpected friends! There is no posting or direct messaging because we'd 
+                like to encourage you to discard your hermit ways (for a short time at least) and become part of the world.</p>
+            
         </div>
 
         <!-- The sign in box at the right side. -->
